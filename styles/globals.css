@@ -150,7 +150,7 @@ body {
 }
 
 body {
-  font-family: var(--font-mono);
+  font-family: var(--font-sec) !important;
   color: #444444;
   font-size:16px
 }
@@ -158,11 +158,13 @@ body {
 a {
   color: var(--primary);
   text-decoration: none;
+  font-family: var(--font-sec) !important;
 }
 
 a:hover {
   color: var(--primary-hover);
   text-decoration: none;
+ 
 }
 
 
@@ -172,7 +174,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-mono);
+  font-family: var(--font-mono) !important;
   /* text-wrap:balance */
 }
 img{
@@ -188,6 +190,9 @@ p{
   color: var(--secnadry);
   line-height: 1.5;
   font-family: var(--font-sec);
+}
+ul li{
+  
 }
 
 
