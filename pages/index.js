@@ -87,7 +87,7 @@ export default function Home() {
               <div className='about-us-content'>
                 <h2>About Us</h2>
                 <p>We are a family-run business with over 20 years of experience in the stone industry. We pride ourselves on our craftsmanship and attention to detail.</p>
-                <a className='btn btn-three'>Learn More</a>
+                <a className='btn btn-three' href='#'>Learn More</a>
               </div>
             </div>
             <div className='col-lg-6'>
