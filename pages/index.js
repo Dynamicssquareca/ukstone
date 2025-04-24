@@ -12,7 +12,7 @@ export default function Home() {
         <title>Home Page</title>
       </Head>
 
-      <div className='hero-banner-one' style={{ backgroundImage: 'url("/img/banner/hero-banner-01.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' ,backgroundRepeat: 'no-repeat' }}>
+      <div className='hero-banner-one' style={{ backgroundImage: 'url("/img/banner/hero-banner-01.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
         <div className='container'>
           <div className='row align-items-center justify-content-center'>
             <div className='col-lg-9 text-center'>
@@ -20,24 +20,24 @@ export default function Home() {
                 <h1>Welcome to <span>Stone Discover</span> UK</h1>
                 <p>We specialize in creating premium quality memorial headstones and gravestones using the finest granite</p>
                 <div className='hero-banner-btn'>
-                <a className='btn btn-three'>Get Quotes</a>
-                <a className='btn btn-transparent'>Request Catalogue</a>
+                  <a className='btn btn-three'>Get Quotes</a>
+                  <a className='btn btn-transparent'>Request Catalogue</a>
                 </div>
-                
+
               </div>
             </div>
           </div>
         </div>
 
       </div>
-   
+
       <section className='quote-us-section'>
         <div className='container'>
           <div className='row align-items-center justify-content-center'>
             <div className='col-lg-12 text-center'>
               <div className='quote-us-content'>
                 <p>We proudly serve dealers and wholesalers across the UK, offering memorial stones in bulk quantities that are carefully designed and produced in our industries to meet the highest quality standards for the customers.</p>
-                
+
               </div>
             </div>
           </div>
@@ -79,14 +79,14 @@ export default function Home() {
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='card-01'>
-              <img src='/img/icons/delivery-truck-speed.svg' alt='Seamless Delivery' className='img-fluid' />
+                <img src='/img/icons/delivery-truck-speed.svg' alt='Seamless Delivery' className='img-fluid' />
                 <h3>Seamless Delivery</h3>
                 <p>We keep standard catalogue items in stock for quick delivery. If you need special bespoke designs or made-to-order items, we have one of the fastest delivery times in the industry, taking just 7 to 8 weeks from our factory in India.</p>
               </div>
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='card-01'>
-              <img src='/img/icons/handyman.svg' alt='Timeless Craftsmanship' className='img-fluid' />
+                <img src='/img/icons/handyman.svg' alt='Timeless Craftsmanship' className='img-fluid' />
                 <h3>Timeless Craftsmanship</h3>
                 <p>Our factory in India is powered by skilled craftsmen who expertly create memorials in any bespoke design you need. Click here to explore the latest personalized headstone designs that we have delivered.</p>
               </div>
@@ -95,10 +95,51 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section className='products-section-one'>
         <div className='container'>
           <div className='row'>
-
+            <div className='col-lg-12 text-center'>
+              <div className='heading-center p-b-40'>
+                <h2 className='m-b-20'>Any <span> Design</span>, Size, Color</h2>
+               
+              </div>
+            </div>
+          </div>
+          <div className='row'>
+            <div className='col-lg-12'>
+              <div className='card-02'>
+                <div className='card-02-item'>
+                  <a href="">
+                    <img src='/img/webpages/pic-01.png' alt='About Us' className='img-fluid' />
+                    <h3>Book Shaped</h3>
+                  </a>
+                </div>
+                <div className='card-02-item'>
+                  <a href="">
+                    <img src='/img/webpages/pic-02.png' alt='About Us' className='img-fluid' />
+                    <h3>Heart Shaped</h3>
+                  </a>
+                </div>
+                <div className='card-02-item'>
+                  <a href="">
+                    <img src='/img/webpages/pic-03.png' alt='About Us' className='img-fluid' />
+                    <h3>Headstones</h3>
+                  </a>
+                </div>
+                <div className='card-02-item'>
+                  <a href="">
+                    <img src='/img/webpages/pic-04.png' alt='About Us' className='img-fluid' />
+                    <h3>Angels Headstone</h3>
+                  </a>
+                </div>
+                <div className='card-02-item'>
+                  <a href="">
+                    <img src='/img/webpages/pic-05.png' alt='About Us' className='img-fluid' />
+                    <h3>Vases</h3>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

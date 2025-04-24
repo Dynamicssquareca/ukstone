@@ -160,11 +160,11 @@ a {
   color: var(--primary);
   text-decoration: none;
   font-family: var(--font-sec) !important;
-  transition: all 0.4s ease-in-out !important;
+  transition: all 0.5s ease-in-out !important;
 }
 
 a:hover {
-  color: var(--primary-hover);
+  color: var(--primary);
   text-decoration: none;
  
 }
@@ -326,8 +326,75 @@ ul li{
 .m-t-30{
   margin-top: 30px !important;
 }
+.m-b-20{
+  margin-bottom: 20px !important;
+}
+.m-b-30{
+  margin-bottom: 30px !important;
+}
+.p-t-20{
+  padding-top: 20px !important;
+}
+.p-t-30{
+  padding-top: 30px !important;
+}
+.p-t-40{
+  padding-top: 40px !important;
+}
+.p-t-50{
+  padding-top: 50px !important;
+}
+.p-t-60{
+  padding-top: 60px !important;
+}
+.p-t-70{
+  padding-top: 70px !important;
+}
+.p-t-80{
+  padding-top: 80px !important;
+}
+.p-b-20{
+  padding-bottom: 20px !important;
+}
+.p-b-30{
+  padding-bottom: 30px !important;
+}
+.p-b-40{
+  padding-bottom: 40px !important;
+}
+.p-b-50{
+  padding-bottom: 50px !important;
+}
+.p-b-60{
+  padding-bottom: 60px !important;
+}
+.p-b-70{
+  padding-bottom: 70px !important;
+}
+.p-b-80{
+  padding-bottom: 80px !important;
+}
 
-
+/*headings*/
+.heading-center{
+  text-align: center;
+}
+.heading-center h2{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  
+}
+.heading-center span{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  background-image: linear-gradient(102deg, #ffbb78 -16%, #ff8c3a 97%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+}
 /*card*/
 .card-01{
   padding: 15px;
@@ -344,7 +411,43 @@ ul li{
 .card-01 p{
   
 }
+.card-02{
+  display: flex;
+      gap: 15px;
+}
+.card-02-item{
 
+}
+.card-02-item a{
+  display: block;
+  position: relative;
+  border: solid 2px transparent;
+  border-radius: 8px;
+  z-index: 1;
+  position: relative;
+}
+.card-02-item img{}
+.card-02-item h3{
+  position: absolute;
+  font-family: var(--font-sec) !important;
+  bottom: 15px;
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.card-02-item a:hover h3{
+  color:var(--color-primary) !important;
+  transform: translateY(-15px);
+}
+.card-02-item a:hover{
+  border-radius: 8px;
+  box-shadow: 8px 8px 60px 0 rgba(0, 0, 0, 0.4);
+  border: solid 2px #fff;
+ transform:scale(1.03);
+}
 /*get quation*/
 .quote-us-section{
   padding: 300px 0;
@@ -397,4 +500,10 @@ ul li{
 }
 .about-us-content p{
   padding-right: 100px;
+}
+
+/*all section cales*/
+.products-section-one{
+  padding: 60px 0;
+  background-color: #f7f6f3;
 }
