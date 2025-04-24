@@ -188,8 +188,8 @@ section{
   padding-bottom:60px 
 }
 p{
-  font-size: 15px;
-  color: var(--secnadry);
+  font-size: 16px;
+  color: var(--secondary);
   line-height: 1.5;
   font-family: var(--font-sec);
 }
@@ -267,7 +267,21 @@ ul li{
   background-color: var(--primary-dark) !important;
   border:2px solid var(--primary-dark) !important;
 }
-
+.btn-four{
+  padding: 0.8rem 2.5rem !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #708090 !important;
+  background-color: transparent !important;
+  border-radius: 4px !important;
+  border:1px solid #708090 !important;
+  transition: all 0.5s ease-in-out !important;
+}
+.btn-four:hover{
+  color: var(--color-white) !important;
+  background-color: var(--primary-dark) !important;
+  border-color:   var(--primary-dark) !important;
+}
 
 /*end of code*/
 
@@ -303,4 +317,84 @@ ul li{
 .hero-banner-btn{
   display: block;
     margin-top: 40px;
+}
+
+/*padding and margi*/
+.m-t-20{
+  margin-top: 30px !important;
+}
+.m-t-30{
+  margin-top: 30px !important;
+}
+
+
+/*card*/
+.card-01{
+  padding: 15px;
+}
+.card-01 img{
+  margin-bottom: 26px;
+}
+.card-01 h3{
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 16px;
+
+}
+.card-01 p{
+  
+}
+
+/*get quation*/
+.quote-us-section{
+  padding: 300px 0;
+}
+.quote-us-content{
+  position: relative;
+}
+.quote-us-content:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 130px;
+  height: 130px;
+  background-image: url('/img/icons/quote-left.png');
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.quote-us-content:after{
+  content: '';
+  position: absolute;
+  bottom: -46px;
+  right: -40px;
+  width: 130px;
+  height: 130px;
+  background-image: url('/img/icons/quote-right.png');
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.quote-us-content p{
+  font-size: 32px;
+  font-weight: 500;
+  padding: 0px 100px;
+  font-family: var(--font-mono) !important;
+  letter-spacing: -0.32px;
+}
+.about-us-content{
+
+}
+.about-us-content h2{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: left;
+  background-image: linear-gradient(102deg, #ffbb78 -16%, #ff8c3a 97%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 30px;
+}
+.about-us-content p{
+  padding-right: 100px;
 }
