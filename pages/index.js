@@ -101,7 +101,7 @@ export default function Home() {
             <div className='col-lg-12 text-center'>
               <div className='heading-center p-b-40'>
                 <h2 className='m-b-20'>Any <span> Design</span>, Size, Color</h2>
-               
+
               </div>
             </div>
           </div>
@@ -149,7 +149,7 @@ export default function Home() {
           <div className='row'>
             <div className='col-lg-6 align-items-center'>
               <div className='left-card-01-img'>
-              <img src='/img/webpages/pic-06.png' alt='About Us' className='img-fluid' />
+                <img src='/img/webpages/pic-06.png' alt='About Us' className='img-fluid' />
               </div>
             </div>
             <div className='col-lg-6 d-flex'>
@@ -170,10 +170,25 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-            
+
           </div>
         </div>
 
+      </section>
+
+      <section>
+        <div className='container'>
+          <div className='row justify-content-center'>
+            <div className='col-lg-9'>
+              <div className='heading-center p-b-40'>
+                <h2 className='m-b-30'>Memorial Collection <span>Crafted</span> for All</h2>
+                <p>We offer a wide range of expertly crafted memorial designs to suit every need and occasion. From classic headstones and kerbsets to elegant bench and heart memorials, our collection also includes vases, urns, angel tributes, and dedicated children’s memorials. Each piece is made with care, precision, and a deep respect for the memories it honors. Contact us directly for competitive quotes and tailored solutions.</p>
+              </div>
+            </div>
+          </div>
+          <div className='row'>
+          </div>         
+        </div>
       </section>
 
 

@@ -388,8 +388,9 @@ ul li{
 .heading-center h2{
   font-size: 40px;
   font-weight: bold;
-  text-align: center;
-  
+}
+.heading-center p{
+  font-size: 14px;
 }
 .heading-center span{
   font-size: 40px;
