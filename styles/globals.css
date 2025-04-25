@@ -869,3 +869,6 @@ gap:30px;
   outline: none !important;
   border-bottom: 1px solid #7e7e7e;
 }
+.text-right-row{
+  text-align: right;
+}
