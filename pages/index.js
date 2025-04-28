@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='about-us-section'>
+      <section className='about-us-section p-b-40'>
         <div className='container'>
           <div className='row'>
             <div className='col-lg-6'>
@@ -67,7 +67,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='p-t-40'>
+      <section className='p-t-40 p-b-40'>
         <div className='container'>
           <div className='row'>
             <div className='col-lg-4 d-flex'>
@@ -144,7 +144,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='content-section-two p-b-100 p-t-100'>
+      <section className='content-section-two p-b-80 p-t-100'>
         <div className='container'>
           <div className='row'>
             <div className='col-lg-6 align-items-center'>
@@ -176,7 +176,7 @@ export default function Home() {
 
       </section>
 
-      <section className='p-t-60'>
+      <section className='p-b-100'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-9'>
@@ -186,8 +186,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className='row g-2'>
-            <div className='col-lg-2'>
+          <div className='row g-2 sliding-row'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/">
@@ -197,7 +197,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='col-lg-2'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/">
@@ -207,7 +207,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='col-lg-2'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/">
@@ -217,7 +217,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='col-lg-2'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/">
@@ -227,7 +227,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='col-lg-2'>
+            <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/">
@@ -237,7 +237,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='col-lg-2'>
+            <div className='col-lg-2  col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/">
@@ -268,7 +268,7 @@ export default function Home() {
           </div>
         </div>
       </section> */}
-      <section className='p-t-80'>
+      <section className='p-b-30'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-9'>

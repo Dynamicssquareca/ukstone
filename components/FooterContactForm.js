@@ -58,10 +58,7 @@ const FooterContactForm = () => {
                 </div>
             </div>
             <div className='row bg-gray'>
-                <div className='col-lg-6'>
-                    <Form onSubmit={handleFormSubmit} />
-                </div>
-                <div className='col-lg-6'>
+            <div className='col-lg-6 order-1 order-lg-2'>
                     <div className='form-left'>
                         <div className='accordion-one'>
                             <Accordion open={open} toggle={toggle}>
@@ -151,6 +148,10 @@ const FooterContactForm = () => {
                     </div>
                 </div>
 
+                <div className='col-lg-6 order-2 order-lg-1'>
+                    <Form onSubmit={handleFormSubmit} />
+                </div>
+               
 
             </div>
         </div>

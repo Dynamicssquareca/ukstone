@@ -10,20 +10,21 @@ const Nav = () => {
   // const toggles = () => setDropdownOpen(!dropdownOpen);
 
   const servicesItems = [
-    { label: 'Salesforce Implementation', href: '/services/salesforce-implementation/' },
-    { label: 'Salesforce Customization', href: '/services/salesforce-customization/' },
-    { label: 'Salesforce integration', href: '/services/salesforce-integration/' },
-    { label: 'Salesforce Training ', href: '/services/salesforce-training/' },
-    { label: 'Salesforce Support', href: '/services/salesforce-support/' },
-    { label: 'Salesforce Optimization', href: '/services/salesforce-optimization/' },
+    { label: 'Item-1', href: '/' },
+    { label: 'Item-2', href: '/' },
+    { label: 'Item-3', href: '/' },
+    { label: 'Item-4', href: '/' },
+    { label: 'Item-5', href: '/' },
+    { label: 'Item-6', href: '/' },
   ];
 
   const solutionsItems = [
-    { label: 'Small Business', href: '/solutions/salesforce-small-business/' },
-    { label: 'Sales Cloud', href: '/solutions/salesforce-sales-cloud/' },
-    { label: 'Service Cloud', href: '/solutions/salesforce-service-cloud/' },
-    { label: 'Marketing Cloud', href: '/solutions/salesforce-marketing-cloud/' },
-    { label: 'Commerce Cloud', href: '/solutions/salesforce-commerce-cloud/' },
+    { label: 'Item-1', href: '/' },
+    { label: 'Item-2', href: '/' },
+    { label: 'Item-3', href: '/' },
+    { label: 'Item-4', href: '/' },
+    { label: 'Item-5', href: '/' },
+    { label: 'Item-6', href: '/' },
   ];
 
   const resourceItems = [
@@ -179,15 +180,15 @@ const Nav = () => {
           <Offcanvas isOpen={isOpen} toggle={toggles} className='navbar-mobile'>
             <OffcanvasHeader toggle={toggles}>
               <div className='mobile-logo'>
-                <a href="/"><img src="/crm_frontier_logo.png" alt="/crm_frontier_logo" /></a>
+                <a href="/"><img src="/stone-logo.png" width={200} alt="stone-logo" /></a>
               </div>
             </OffcanvasHeader>
             <OffcanvasBody>
 
               <ul>
 
-                <DropdownComponent id="servicesDropdown" label="Services" items={servicesItems} />
-                <DropdownComponent id="solutionsDropdown" label="Solutions" items={solutionsItems} />
+                <DropdownComponent id="servicesDropdown" label="Drop Down" items={servicesItems} />
+                <DropdownComponent id="solutionsDropdown" label="Drop Down" items={solutionsItems} />
                 {/* <DropdownComponent label="Resources" items={resourceItems} /> */}
                 <li><a className="nav-link scrollto" href="/about-us/">About US</a></li>
                 <li><a className="nav-link" href="/blog/">Blogs</a></li> 

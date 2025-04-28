@@ -28,7 +28,7 @@ const Footer = () => {
             <div className='footer-subscriber m-t-80'>
                 <div className='container'>
                     <div className='row'>
-                        <div className='col-lg-7'>
+                        <div className='col-lg-6'>
                             <div className='subsc-head'>
                                <div className='sub-it'>
                                 <p>Sales and Support:</p>
@@ -40,7 +40,7 @@ const Footer = () => {
                                </div>
                             </div>
                         </div>
-                        <div className='col-lg-5 align-self-center'>
+                        <div className='col-lg-6 align-self-center'>
                             <div className='subsc-head-right'>
 
                                 <div className='subsc-head-right-l'>
