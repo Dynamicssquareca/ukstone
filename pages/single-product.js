@@ -13,6 +13,10 @@ import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
 const SingleProduct = () => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+    const sliderRef = useRef(null);  // Reference to the Swiper container
+    const slideRef = useRef(null);   // Reference to the current SwiperSlide
+
     return (
         <>
             <Head>
@@ -45,6 +49,7 @@ const SingleProduct = () => {
                                         '--swiper-navigation-color': '#fff',
                                         '--swiper-pagination-color': '#fff',
                                     }}
+                                    ref={sliderRef}
                                     loop={true}
                                     spaceBetween={10}
                                     navigation={true}
@@ -52,25 +57,29 @@ const SingleProduct = () => {
                                     modules={[FreeMode, Navigation, Thumbs]}
                                     className="mySwiper2"
                                 >
-                                    <SwiperSlide>
+                                   <SwiperSlide ref={slideRef}>
                                         <ImageMagnifier
                                             src="https://cdn-iicel.nitrocdn.com/kWkIcgZsMsclxAYXwZxVGNlWeSIUwOaS/assets/images/optimized/rev-d2023a6/www.stonediscover.com/wp-content/uploads/2023/03/Frame-63.png"
                                             alt="Product 1"
                                             zoomWidth={600}
                                             zoomScale={2}
+                                            sliderRef={sliderRef}
                                         />
                                     </SwiperSlide>
-                                    <SwiperSlide>
+                                   <SwiperSlide ref={slideRef}>
                                         <ImageMagnifier src="https://swiperjs.com/demos/images/nature-2.jpg" zoomWidth={600}
-                                            zoomScale={2} />
+                                            zoomScale={2}  sliderRef={sliderRef} />
+                                            
                                     </SwiperSlide>
-                                    <SwiperSlide>
+                                   <SwiperSlide ref={slideRef}>
                                         <ImageMagnifier src="https://swiperjs.com/demos/images/nature-3.jpg" zoomWidth={600}
-                                            zoomScale={2} />
+                                            zoomScale={2} sliderRef={sliderRef} />
+                                             
                                     </SwiperSlide>
-                                    <SwiperSlide>
+                                   <SwiperSlide ref={slideRef}>
                                         <ImageMagnifier src="https://swiperjs.com/demos/images/nature-4.jpg" zoomWidth={600}
-                                            zoomScale={2} />
+                                            zoomScale={2}   sliderRef={sliderRef} />
+                                           
                                     </SwiperSlide>
                                     
                                 </Swiper>

@@ -1,77 +1,107 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
-
-const ImageMagnifier = ({ src, zoomWidth = 300, zoomScale = 2, alt }) => {
+const ImageMagnifier = ({ src, zoomScale = 2, alt = '', sliderRef }) => {
+  const imgRef = useRef(null);
   const [visible, setVisible] = useState(false);
   const [bgPos, setBgPos] = useState('0% 0%');
-  const [imgHeight, setImgHeight] = useState(0);
-  const [imgPos, setImgPos] = useState({});
-  const [isClient, setIsClient] = useState(false); // Track if it's client-side
+  const [zoomStyle, setZoomStyle] = useState(null);
+  const [isClient, setIsClient] = useState(false);
 
-  const imgRef = useRef(null);
-
-  // Check if running in the client-side
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  
+  const getZoomWidth = () => {
+    const width = window.innerWidth;
+    if (width > 1200) return 500;
+    if (width > 992) return 400;
+    return 200;
+  };
+
+  const updateZoomBoxPosition = () => {
+    if (window.innerWidth <= 992 || !imgRef.current || !sliderRef.current) return;
+
+    const img = imgRef.current;
+    const slider = sliderRef.current;
+    const zoomWidth = getZoomWidth();
+
+    // Assuming the slider's position relative to the viewport and image width
+    const sliderEnd = slider.offsetLeft + slider.offsetWidth;
+    const zoomBoxLeft = sliderEnd + 10;  // Adding a little space after the slider
+
+    const fixedTopPosition = 145; 
+
+    setZoomStyle((prev) => ({
+      ...prev,
+      top: fixedTopPosition + 'px',
+      left: zoomBoxLeft + 'px',  // Adjust the left position to start after the main image slider
+      height: img.offsetHeight + 'px',
+      width: zoomWidth + 'px',
+    }));
+};
 
   const handleMouseEnter = () => {
-    setImgHeight(imgRef.current?.clientHeight || 0);
+    if (window.innerWidth < 768) return; // Disable on small screens
+    updateZoomBoxPosition();
     setVisible(true);
+    window.addEventListener('resize', updateZoomBoxPosition);
   };
 
-  const handleMouseLeave = () => setVisible(false);
+  const handleMouseLeave = () => {
+    setVisible(false);
+    window.removeEventListener('resize', updateZoomBoxPosition);
+  };
 
   const handleMouseMove = (e) => {
-    const { left, top, width, height } = imgRef.current.getBoundingClientRect();
-    const x = ((e.pageX - left - window.scrollX) / width) * 100;
-    const y = ((e.pageY - top - window.scrollY) / height) * 100;
+    const rect = imgRef.current.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
     setBgPos(`${x}% ${y}%`);
-  };
 
-  // Update the container position when the image is loaded or resized
-  useEffect(() => {
-    if (imgRef.current) {
-      const rect = imgRef.current.getBoundingClientRect();
-      setImgPos(rect);
-    }
-  }, [imgRef.current]);
-
-  // Only render the zoom box on the client-side (after component is mounted)
-  if (!isClient) {
-    return <img ref={imgRef} src={src} alt={alt} className="original-image" />;
-  }
-
-  const zoomBoxStyles = {
-    backgroundImage: `url(${src})`,
-    backgroundPosition: bgPos,
-    backgroundSize: `${zoomScale * 100}%`,
-    height: imgHeight,
-    width: zoomWidth,
-    top: imgPos.top + window.scrollY, // Absolute position on the page
-    left: imgPos.left + window.scrollX + imgPos.width + 5, // Position to the right of the image
-    position: 'absolute',
-    pointerEvents: 'none',
-    zIndex: 999,
+    setZoomStyle((prev) => ({
+      ...prev,
+      backgroundPosition: `${x}% ${y}%`,
+    }));
   };
 
   return (
-    <div
-      className="magnifier-container"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onMouseMove={handleMouseMove}
-    >
-      <img ref={imgRef} src={src} alt={alt} className="original-image" />
+    <>
+      <div
+        style={{ display: 'inline-block', position: 'relative' }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onMouseMove={handleMouseMove}
+      >
+        <img
+          ref={imgRef}
+          src={src}
+          alt={alt}
+          style={{ maxWidth: '100%', display: 'block' }}
+        />
+      </div>
 
-      {visible && ReactDOM.createPortal(
-        <div className="zoom-box-absolute" style={zoomBoxStyles} />,
-        document.body // Render it outside Swiper, directly in the body
-      )}
-    </div>
+      {isClient && visible &&
+        ReactDOM.createPortal(
+          <div
+            className="zoom-box"
+            style={{
+              position: 'absolute',
+              backgroundImage: `url(${src})`,
+              backgroundSize: `${zoomScale * 100}%`,
+              backgroundPosition: bgPos,
+              backgroundRepeat: 'no-repeat',
+              border: '1px solid #ccc',
+              pointerEvents: 'none',
+              zIndex: 9999,
+              backgroundColor: '#fff',
+              boxShadow: '0 0 6px rgba(0,0,0,0.2)',
+              ...zoomStyle,
+            }}
+          />,
+          document.body
+        )}
+    </>
   );
 };
 

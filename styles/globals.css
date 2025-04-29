@@ -982,7 +982,7 @@ align-items: center;
 
 
 /*image zoom*/
-.magnifier-container {
+/* .magnifier-container {
   position: relative;
   display: inline-block;
 }
@@ -1000,9 +1000,11 @@ align-items: center;
   background-position: center;
   pointer-events: none;
   z-index: 999;
+} */
+
+.swiper-slide {
+  position: relative;
 }
-
-
 /*media screen*/
 
 @media (min-width: 1640px) and (max-width: 1920px) {
