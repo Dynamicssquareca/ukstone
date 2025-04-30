@@ -116,9 +116,9 @@
   }
   
   .footer .footer-top h4 {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
-    color: #ffffff;
+    color: var(--primary);
     text-transform: capitalize;
     position: relative;
     padding-bottom: 12px;
@@ -136,7 +136,7 @@
   
   .footer .footer-top .footer-links ul i {
     padding-right: 5px;
-    color: #d0d4fc;
+    color: #000;
     font-size: 12px;
     line-height: 0;
   }
@@ -163,7 +163,7 @@
   }
   
   .footer .footer-top .footer-contact p {
-    line-height: 26px;
+    font-size:15px
   }
   .footer .bottom-footer{
     background-color: #373535;

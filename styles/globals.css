@@ -830,6 +830,7 @@ ul li {
 }
 .subsc-head-right .subsc-head-right-l h4 {
   font-size: 14px;
+  margin-bottom:0
 }
 .subsc-head-right-r {
   flex: 1 1 60%;
