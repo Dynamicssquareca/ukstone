@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import Head from 'next/head';
-
+import ModelBox from '@/components/ModelBox';
 export default function Home() {
 
 
@@ -20,8 +20,8 @@ export default function Home() {
                 <h1>Welcome to <span>Stone Discover</span> UK</h1>
                 <p>We specialize in creating premium quality memorial headstones and gravestones using the finest granite</p>
                 <div className='hero-banner-btn'>
-                  <a className='btn btn-three'>Get Quotes</a>
-                  <a className='btn btn-transparent'>Request Catalogue</a>
+                  <ModelBox className='btn-three' headerText="Scale Your Store! " buttonText="Get Quotes" />
+                  <ModelBox className='btn-transparent' headerText="Scale Your Store! " buttonText="Request Catalogue" />
                 </div>
 
               </div>

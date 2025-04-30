@@ -30,7 +30,7 @@ const ImageMagnifier = ({ src, zoomScale = 2, alt = '', sliderRef }) => {
     const sliderEnd = slider.offsetLeft + slider.offsetWidth;
     const zoomBoxLeft = sliderEnd + 10;  // Adding a little space after the slider
 
-    const fixedTopPosition = 145; 
+    const fixedTopPosition = 185; 
 
     setZoomStyle((prev) => ({
       ...prev,
@@ -88,12 +88,12 @@ const ImageMagnifier = ({ src, zoomScale = 2, alt = '', sliderRef }) => {
             style={{
               position: 'absolute',
               backgroundImage: `url(${src})`,
-              backgroundSize: `${zoomScale * 100}%`,
+              backgroundSize: `${zoomScale * 75}%`,
               backgroundPosition: bgPos,
               backgroundRepeat: 'no-repeat',
               border: '1px solid #ccc',
               pointerEvents: 'none',
-              zIndex: 9999,
+              zIndex: 9,
               backgroundColor: '#fff',
               boxShadow: '0 0 6px rgba(0,0,0,0.2)',
               ...zoomStyle,

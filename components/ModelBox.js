@@ -19,7 +19,7 @@ function ModelBox({ headerText, buttonText, buttonTextSpan, className = "", ...a
 
   return (
     <div className='custom-model'>
-       <Button className={`btn btn-prime ${className}`} onClick={toggle}>
+       <Button className={`btn ${className}`} onClick={toggle}>
        {buttonText}
       </Button>
       <Modal className='model-form'  isOpen={modal} toggle={toggle} {...args} centered 	
@@ -30,10 +30,10 @@ function ModelBox({ headerText, buttonText, buttonTextSpan, className = "", ...a
             <div className='model-left'>
             {/* {headerText} {buttonTextSpan} */}
               <div>
-              <h3>Get Your <span>Free</span><br/> Salesforce <span>Consultation</span></h3>
-              <p>Transform your business with customized<br/> Salesforce Solutions</p>
+              <h3>Begin Your <span>Tribute</span> with a <span>Custom Design</span></h3>
+              <p>Craft lasting tributes with custom-designed granite headstones, made to honor and endure.</p>
               </div>
-              <img src="/img/banner/hero-shape.png" alt="img" />
+              {/* <img src="/img/banner/hero-shape.png" alt="img" /> */}
             </div>
             <div className='model-rigt'>
               <FormCta  onSubmit={handleSubmit}/>

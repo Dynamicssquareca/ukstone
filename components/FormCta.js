@@ -59,6 +59,13 @@ const FormCta = ({ onSubmit }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+     //spam boat
+     const formData = new FormData(e.target);
+     if (formData.get('website')) {
+       console.warn("Spam bot detected.");
+       return;
+     }
+
     if (!validateForm()) {
       return;
     }
@@ -80,35 +87,35 @@ const FormCta = ({ onSubmit }) => {
         console.error('Error sending email:', error);
       });
 
-// Send data to the custom API
-try {
-  const response = await fetch('https://www.minimallyyours.com/api/zohocrmforceplus', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      formName: 'Main Form', // Add your form name
-    name: name,
-    email: email,
-    phone: phone,
-    message: message,
-    formtag: 'CTA Form', // Add the form tag
-    currentPageUrl: pageUrl,
-    companyname: company,
-    defaultCountryName: defaultCountryCode,
-    }),
-  });
+    // Send data to the custom API
+    try {
+      const response = await fetch('https://www.minimallyyours.com/api/zohocrmforceplus', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          formName: 'Main Form', // Add your form name
+          name: name,
+          email: email,
+          phone: phone,
+          message: message,
+          formtag: 'CTA Form', // Add the form tag
+          currentPageUrl: pageUrl,
+          companyname: company,
+          defaultCountryName: defaultCountryCode,
+        }),
+      });
 
-  if (!response.ok) {
-    throw new Error('Failed to submit data to the API');
-  }
+      if (!response.ok) {
+        throw new Error('Failed to submit data to the API');
+      }
 
-  const apiData = await response.json();
-  console.log('Data successfully sent to the API:', apiData);
-} catch (error) {
-  console.error('Error submitting data to the API:', error);
-}
+      const apiData = await response.json();
+      console.log('Data successfully sent to the API:', apiData);
+    } catch (error) {
+      console.error('Error submitting data to the API:', error);
+    }
 
 
 
@@ -235,6 +242,14 @@ try {
         <label htmlFor="name">Full Name</label>
         {errors.name && <div className="text-danger">{errors.name}</div>}
       </div>
+      <div style={{ display: 'none' }}>
+        <input
+          type="text"
+          name="website"
+          autoComplete="off"
+          onChange={() => { }}
+        />
+      </div>
       <div className="form-group">
         <input
           type="email"
@@ -358,8 +373,8 @@ try {
           .
         </label>
       </div>
-      <button className='btn btn-prime btn-full' type="submit" disabled={submitted}>
-        {submitted ? `Submitting (${redirectTimer})` : 'Request CallBack'}
+      <button className='btn btn-three' type="submit" disabled={submitted}>
+        {submitted ? `Submitting (${redirectTimer})` : 'Request a Quote'}
       </button>
       {/* {submitted && <p>Your form has been submitted!</p>} */}
     </form>

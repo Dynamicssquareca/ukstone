@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { Accordion, AccordionBody, AccordionHeader, AccordionItem, } from 'reactstrap';
+import ModelBox from '@/components/ModelBox';
 const SiglePage = () => {
 
 /*accordian code*/
@@ -73,7 +74,7 @@ const SiglePage = () => {
                         <div className='col-lg-3 sliding-col-05'>
                             <div className='card-06'>
                                 <div className='card-06-item'>
-                                    <a href="/">
+                                    <a href="/single-product/">
                                         <img src='/img/webpages/product-01.jpg' alt='product-01' className='img-fluid' />
                                         <span>Headstones</span>
                                     </a>
@@ -83,7 +84,7 @@ const SiglePage = () => {
                         <div className='col-lg-3 sliding-col-05'>
                             <div className='card-06'>
                                 <div className='card-06-item'>
-                                    <a href="/">
+                                    <a href="/single-product/">
                                         <img src='/img/webpages/product-02.jpg' alt='product-01' className='img-fluid' />
                                         <span>Headstones</span>
                                     </a>
@@ -93,7 +94,7 @@ const SiglePage = () => {
                         <div className='col-lg-3 sliding-col-05'>
                             <div className='card-06'>
                                 <div className='card-06-item'>
-                                    <a href="/">
+                                    <a href="/single-product/">
                                         <img src='/img/webpages/product-03.jpg' alt='product-01' className='img-fluid' />
                                         <span>Headstones</span>
                                     </a>
@@ -103,7 +104,7 @@ const SiglePage = () => {
                         <div className='col-lg-3 sliding-col-05'>
                             <div className='card-06'>
                                 <div className='card-06-item'>
-                                    <a href="/">
+                                    <a href="/single-product/">
                                         <img src='/img/webpages/product-04.jpg' alt='product-01' className='img-fluid' />
                                         <span>Headstones</span>
                                     </a>
@@ -113,7 +114,7 @@ const SiglePage = () => {
                         <div className='col-lg-3 sliding-col-05'>
                             <div className='card-06'>
                                 <div className='card-06-item'>
-                                    <a href="/">
+                                    <a href="/single-product/">
                                         <img src='/img/webpages/product-04.jpg' alt='product-01' className='img-fluid' />
                                         <span>Headstones</span>
                                     </a>
@@ -123,7 +124,7 @@ const SiglePage = () => {
                         <div className='col-lg-3 sliding-col-05'>
                             <div className='card-06'>
                                 <div className='card-06-item'>
-                                    <a href="/">
+                                    <a href="/single-product/">
                                         <img src='/img/webpages/product-03.jpg' alt='product-01' className='img-fluid' />
                                         <span>Headstones</span>
                                     </a>
@@ -133,7 +134,7 @@ const SiglePage = () => {
                         <div className='col-lg-3 sliding-col-05'>
                             <div className='card-06'>
                                 <div className='card-06-item'>
-                                    <a href="/">
+                                    <a href="/single-product/">
                                         <img src='/img/webpages/product-02.jpg' alt='product-01' className='img-fluid' />
                                         <span>Headstones</span>
                                     </a>
@@ -143,7 +144,7 @@ const SiglePage = () => {
                         <div className='col-lg-3 sliding-col-05'>
                             <div className='card-06'>
                                 <div className='card-06-item'>
-                                    <a href="/">
+                                    <a href="/single-product/">
                                         <img src='/img/webpages/product-01.jpg' alt='product-01' className='img-fluid' />
                                         <span>Headstones</span>
                                     </a>
@@ -319,8 +320,8 @@ const SiglePage = () => {
                                 <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
                             </div>
                             <div className='button-center-new text-center'>
-                                <a href='/' className='btn btn-three'>Request a Quote</a>
-                                <a href='/' className='btn btn-four'>Request Catalogue</a>
+                                <ModelBox className='btn-three' headerText="Scale Your Store! " buttonText="Request a Quote" />
+                                <ModelBox className='btn-four' headerText="Scale Your Store! " buttonText="Request Catalogue" />
 
                             </div>
                         </div>

@@ -49,6 +49,12 @@ const Form = ({ onSubmit }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    //spam boat
+    const formData = new FormData(e.target);
+    if (formData.get('website')) {
+      console.warn("Spam bot detected.");
+      return;
+    }
 
     if (!validateForm()) {
       return;
@@ -72,7 +78,7 @@ const Form = ({ onSubmit }) => {
       });
 
 
-      // Send data to the custom API
+    // Send data to the custom API
     try {
       const response = await fetch('https://www.minimallyyours.com/api/', {
         method: 'POST',
@@ -81,14 +87,14 @@ const Form = ({ onSubmit }) => {
         },
         body: JSON.stringify({
           formName: 'Main Form', // Add your form name
-        name: name,
-        email: email,
-        phone: phone,
-        message: message,
-        formtag: 'Main Form', // Add the form tag
-        currentPageUrl: pageUrl,
-        companyname: company,
-        defaultCountryName: defaultCountryCode,
+          name: name,
+          email: email,
+          phone: phone,
+          message: message,
+          formtag: 'Main Form', // Add the form tag
+          currentPageUrl: pageUrl,
+          companyname: company,
+          defaultCountryName: defaultCountryCode,
         }),
       });
 
@@ -226,6 +232,14 @@ const Form = ({ onSubmit }) => {
         <label htmlFor="name">Full Name</label>
         {errors.name && <div className="text-danger">{errors.name}</div>}
       </div>
+      <div style={{ display: 'none' }}>
+        <input
+          type="text"
+          name="website"
+          autoComplete="off"
+          onChange={() => { }}
+        />
+      </div>
       <div className="form-group">
         <input
           type="email"
@@ -350,9 +364,9 @@ const Form = ({ onSubmit }) => {
         </label>
       </div>
       <div className="m-t-30">
-      <button className='btn btn-three' type="submit" disabled={submitted}>
-        {submitted ? `Submitting (${redirectTimer})` : 'Get Quotes'}
-      </button>
+        <button className='btn btn-three' type="submit" disabled={submitted}>
+          {submitted ? `Submitting (${redirectTimer})` : 'Get Quotes'}
+        </button>
       </div>
       {submitted && <p>Your form has been submitted!</p>}
     </form>
