@@ -205,6 +205,61 @@ const SingleProduct = () => {
                 </div>
             </div>
 
+            <section className='p-t-100'>
+                <div className='container'>
+                    <div className='row justify-content-center'>
+                        <div className='col-lg-9'>
+                            <div className='heading-center p-b-40'>
+                                <h2 className='m-b-30'>Realted Products</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='row g-4 sliding-row'>
+                        <div className='col-lg-3 col-md-4 sliding-col'>
+                            <div className='card-04'>
+                                <div className='card-04-item text-center'>
+                                    <a href="/">
+                                        <img src='/test-image.jpg' alt='About Us' className='img-fluid' />
+                                        <h4>Bench</h4>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='col-lg-3 col-md-4 sliding-col'>
+                            <div className='card-04'>
+                                <div className='card-04-item text-center'>
+                                    <a href="/">
+                                        <img src='/test-image.jpg' alt='About Us' className='img-fluid' />
+                                        <h4>Kerbsets</h4>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='col-lg-3 col-md-4 sliding-col'>
+                            <div className='card-04'>
+                                <div className='card-04-item text-center'>
+                                    <a href="/">
+                                        <img src='/test-image.jpg' alt='About Us' className='img-fluid' />
+                                        <h4>Flower Vases</h4>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='col-lg-3 col-md-4 sliding-col'>
+                            <div className='card-04'>
+                                <div className='card-04-item text-center'>
+                                    <a href="/">
+                                        <img src='/test-image.jpg' alt='About Us' className='img-fluid' />
+                                        <h4>Urns</h4>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </section>
+
             <section className='p-b-100 p-t-100'>
                 <div className='container'>
                     <div className='row justify-content-center'>

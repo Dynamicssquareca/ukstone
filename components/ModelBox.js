@@ -30,8 +30,8 @@ function ModelBox({ headerText, buttonText, buttonTextSpan, className = "", ...a
             <div className='model-left'>
             {/* {headerText} {buttonTextSpan} */}
               <div>
-              <h3>Begin Your <span>Tribute</span> with a <span>Custom Design</span></h3>
-              <p>Craft lasting tributes with custom-designed granite headstones, made to honor and endure.</p>
+              <h3><span>Request a Quote</span> for the Finest <span>Quality Memorials</span></h3>
+              <p>Contact us today for a personalized quote and expert assistance.</p>
               </div>
               {/* <img src="/img/banner/hero-shape.png" alt="img" /> */}
             </div>
