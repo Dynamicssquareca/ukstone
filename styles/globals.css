@@ -298,7 +298,8 @@ ul li {
 /*hreo banner one*/
 
 .hero-banner-one {
-  padding: 140px 40px;
+  padding: 160px 40px;
+  position:relative
 }
 .hero-banner-content {
   -webkit-backdrop-filter: blur(25px);
@@ -1176,6 +1177,9 @@ font-size:48px
 @media (min-width: 1400px) and (max-width: 1639px) {
 }
 @media (max-width: 1400px) {
+  .hero-banner-one{
+    padding: 120px 40px;
+  }
   .hero-banner-content h1,.common-header-banner h1 {
     font-size: 40px;
   }

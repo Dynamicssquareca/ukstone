@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import Head from 'next/head';
 import ModelBox from '@/components/ModelBox';
+import Image from 'next/image';
 export default function Home() {
 
 
@@ -12,24 +13,37 @@ export default function Home() {
         <title>Home Page</title>
       </Head>
 
-      <div className='hero-banner-one' style={{ backgroundImage: 'url("/img/banner/hero-banner-01.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
-        <div className='container'>
-          <div className='row align-items-center justify-content-center'>
-            <div className='col-lg-9 text-center'>
-              <div className='hero-banner-content'>
-                <h1>Welcome to <span>Stone Discover</span> UK</h1>
-                <p>We specialize in creating premium quality memorial headstones and gravestones using the finest granite</p>
-                <div className='hero-banner-btn'>
-                  <ModelBox className='btn-three' headerText="Scale Your Store! " buttonText="Get Quotes" />
-                  <ModelBox className='btn-transparent' headerText="Scale Your Store! " buttonText="Request Catalogue" />
-                </div>
+      <div className="hero-banner-one">
+    <Image
+      src="/img/banner/hero-banner-01.jpg"
+      alt="Hero Banner"
+      fill
+      style={{ objectFit: 'cover', objectPosition: 'center' }}
+      priority
+    />
 
+    {/* Content over the image */}
+    <div className="relative z-10">
+      <div className="container">
+        <div className="row align-items-center justify-content-center">
+          <div className="col-lg-9 text-center">
+            <div className="hero-banner-content">
+              <h1>
+                Welcome to <span>Stone Discover</span> UK
+              </h1>
+              <p>
+                We specialize in creating premium quality memorial headstones and gravestones using the finest granite
+              </p>
+              <div className="hero-banner-btn">
+                <ModelBox className="btn-three" headerText="Scale Your Store!" buttonText="Get Quotes" />
+                <ModelBox className="btn-transparent" headerText="Scale Your Store!" buttonText="Request Catalogue" />
               </div>
             </div>
           </div>
         </div>
-
       </div>
+    </div>
+  </div>
 
       <section className='quote-us-section'>
         <div className='container'>
@@ -60,7 +74,7 @@ export default function Home() {
 
             <div className='col-lg-6'>
               <div className='about-us-image'>
-                <img src='/img/webpages/about-us-pic.png' alt='About Us' className='img-fluid' />
+                <Image src='/img/webpages/about-us-pic.png' alt='About Us' className='img-fluid' width={553} height={545} />
               </div>
             </div>
           </div>
@@ -72,21 +86,21 @@ export default function Home() {
           <div className='row'>
             <div className='col-lg-4 d-flex'>
               <div className='card-01'>
-                <img src='/img/icons/add-location-alt.svg' alt='Our Location' className='img-fluid' />
+                <Image src='/img/icons/add-location-alt.svg' alt='Our Location' className='img-fluid' width={38} height={43} />
                 <h3>Our Location</h3>
                 <p>We are based in Liverpool and Southampton, where we maintain a large inventory of catalog items for immediate delivery. As the largest stockist of headstones in the UK, we offer a diverse selection to meet various needs. Our manufacturing facility is located in Alinagar, Chetlapotham, Telangana, Southern India.</p>
               </div>
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='card-01'>
-                <img src='/img/icons/delivery-truck-speed.svg' alt='Seamless Delivery' className='img-fluid' />
+                <Image src='/img/icons/delivery-truck-speed.svg' alt='Seamless Delivery' className='img-fluid' width={38} height={43} />
                 <h3>Seamless Delivery</h3>
                 <p>We keep standard catalogue items in stock for quick delivery. If you need special bespoke designs or made-to-order items, we have one of the fastest delivery times in the industry, taking just 7 to 8 weeks from our factory in India.</p>
               </div>
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='card-01'>
-                <img src='/img/icons/handyman.svg' alt='Timeless Craftsmanship' className='img-fluid' />
+                <Image src='/img/icons/handyman.svg' alt='Timeless Craftsmanship' className='img-fluid' width={38} height={43} />
                 <h3>Timeless Craftsmanship</h3>
                 <p>Our factory in India is powered by skilled craftsmen who expertly create memorials in any bespoke design you need. Click here to explore the latest personalized headstone designs that we have delivered.</p>
               </div>
@@ -110,31 +124,31 @@ export default function Home() {
               <div className='card-02'>
                 <div className='card-02-item'>
                   <a href="/single-page/">
-                    <img src='/img/webpages/pic-01.png' alt='About Us' className='img-fluid' />
+                    <Image src='/img/webpages/pic-01.png' alt='About Us' className='img-fluid' width={256} height={471} />
                     <h3>Book Shaped</h3>
                   </a>
                 </div>
                 <div className='card-02-item'>
                   <a href="/single-page/">
-                    <img src='/img/webpages/pic-02.png' alt='About Us' className='img-fluid' />
+                    <Image src='/img/webpages/pic-02.png' alt='About Us' className='img-fluid' width={256} height={471} />
                     <h3>Heart Shaped</h3>
                   </a>
                 </div>
                 <div className='card-02-item'>
                   <a href="/single-page/">
-                    <img src='/img/webpages/pic-03.png' alt='About Us' className='img-fluid' />
+                    <Image src='/img/webpages/pic-03.png' alt='About Us' className='img-fluid' width={256} height={471} />
                     <h3>Headstones</h3>
                   </a>
                 </div>
                 <div className='card-02-item'>
                   <a href="/single-page/">
-                    <img src='/img/webpages/pic-04.png' alt='About Us' className='img-fluid' />
+                    <Image src='/img/webpages/pic-04.png' alt='About Us' className='img-fluid' width={256} height={471} />
                     <h3>Angels Headstone</h3>
                   </a>
                 </div>
                 <div className='card-02-item'>
                   <a href="/single-page/">
-                    <img src='/img/webpages/pic-05.png' alt='About Us' className='img-fluid' />
+                    <Image src='/img/webpages/pic-05.png' alt='About Us' className='img-fluid' width={256} height={471} />
                     <h3>Vases</h3>
                   </a>
                 </div>
@@ -149,7 +163,7 @@ export default function Home() {
           <div className='row'>
             <div className='col-lg-6 align-items-center'>
               <div className='left-card-01-img'>
-                <img src='/img/webpages/pic-06.png' alt='About Us' className='img-fluid' />
+                <Image src='/img/webpages/pic-06.png' alt='About Us' className='img-fluid' width={553} height={545} />
               </div>
             </div>
             <div className='col-lg-6 d-flex'>
@@ -191,7 +205,7 @@ export default function Home() {
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/single-page/">
-                    <img src='/img/webpages/pic-07.jpg' alt='About Us' className='img-fluid' />
+                    <Image src='/img/webpages/pic-07.jpg' alt='About Us' className='img-fluid' width={210} height={210} />
                     <h4>Bench</h4>
                   </a>
                 </div>
@@ -201,7 +215,7 @@ export default function Home() {
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/single-page/">
-                    <img src='/img/webpages/pic-08.jpg' alt='About Us' className='img-fluid' />
+                    <Image src='/img/webpages/pic-08.jpg' alt='About Us' className='img-fluid' width={210} height={210} />
                     <h4>Kerbsets</h4>
                   </a>
                 </div>
@@ -211,7 +225,7 @@ export default function Home() {
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/single-page/">
-                    <img src='/img/webpages/pic-09.jpg' alt='About Us' className='img-fluid' />
+                    <Image src='/img/webpages/pic-09.jpg' alt='About Us' className='img-fluid' width={210} height={210} />
                     <h4>Flower Vases</h4>
                   </a>
                 </div>
@@ -221,7 +235,7 @@ export default function Home() {
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/single-page/">
-                    <img src='/img/webpages/pic-10.jpg' alt='About Us' className='img-fluid' />
+                    <Image src='/img/webpages/pic-10.jpg' alt='About Us' className='img-fluid' width={210} height={210} />
                     <h4>Urns</h4>
                   </a>
                 </div>
@@ -231,7 +245,7 @@ export default function Home() {
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/single-page/">
-                    <img src='/img/webpages/pic-11.jpg' alt='About Us' className='img-fluid' />
+                    <Image src='/img/webpages/pic-11.jpg' alt='About Us' className='img-fluid' width={210} height={210} />
                     <h4>Angle Heqadstones</h4>
                   </a>
                 </div>
@@ -241,7 +255,7 @@ export default function Home() {
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/single-page/">
-                    <img src='/img/webpages/pic-12.jpg' alt='About Us' className='img-fluid' />
+                    <Image src='/img/webpages/pic-12.jpg' alt='About Us' className='img-fluid' width={210} height={210} />
                     <h4>Children Memorial</h4>
                   </a>
                 </div>
@@ -284,23 +298,23 @@ export default function Home() {
             <div className='col-lg-12'>
               <div className='card-05'>
                 <div className='card-05-item'>
-                  <img src='/img/icons/icons-1.png' alt='About Us' className='img-fluid' />
+                  <Image src='/img/icons/icons-1.png' alt='About Us' className='img-fluid' width={58} height={76} />
                   <span>Quality Craftmanship</span>
                 </div>
                 <div className='card-05-item'>
-                  <img src='/img/icons/icons-2.png' alt='About Us' className='img-fluid' />
+                  <Image src='/img/icons/icons-2.png' alt='About Us' className='img-fluid' width={58} height={76} />
                   <span>Nationwide Delivery</span>
                 </div>
                 <div className='card-05-item'>
-                  <img src='/img/icons/icons-3.png' alt='About Us' className='img-fluid' />
+                  <Image src='/img/icons/icons-3.png' alt='About Us' className='img-fluid' width={58} height={76} />
                   <span>24*7 Customer Service</span>
                 </div>
                 <div className='card-05-item'>
-                  <img src='/img/icons/icons-4.png' alt='About Us' className='img-fluid' />
+                  <Image src='/img/icons/icons-4.png' alt='About Us' className='img-fluid' width={58} height={76} />
                   <span>Custom Designs</span>
                 </div>
                 <div className='card-05-item'>
-                  <img src='/img/icons/icons-5.png' alt='About Us' className='img-fluid' />
+                  <Image src='/img/icons/icons-5.png' alt='About Us' className='img-fluid' width={58} height={76} />
                   <span>Experienced Masons</span>
                 </div>
               </div>
