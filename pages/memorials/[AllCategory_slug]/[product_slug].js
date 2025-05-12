@@ -1,78 +1,96 @@
-// pages/memorials/[AllCategory_slug]/[product_slug].js
-
-import Image from 'next/image';
 import React from 'react';
-
+import Image from 'next/image';
 
 const getImageUrl = (img) =>
-  img ? `${process.env.NEXT_PUBLIC_IMAGE}/${img}` : '/img/webpages/product-01.jpg'
+  img ? `${process.env.NEXT_PUBLIC_IMAGE}/${img}` : '/img/webpages/product-01.jpg';
 
-const ProductDetailsPage = ({ product }) => {
-  if (!product) return <p>Error: Product not found.</p>;
+const ProductPage = ({ product, relatedProducts, error }) => {
+  if (error) {
+    return <div className="container py-5 text-center">Error loading product. Please try again later.</div>;
+  }
 
   return (
-    <div>
+    <div className="container py-5">
       <h1>{product.title}</h1>
-      {product.images?.length > 0 ? (
-        product.images.map((img, idx) => (
-          <Image
-            src={getImageUrl(product.images?.[0])}
-            alt={product.title}
-            width={500}
-            height={400}
-            className="img-fluid"
-          />
-        ))
-      ) : (
-        <p>No images available.</p>
-      )}
+      <div className="mb-4">
+        <Image
+          src={getImageUrl(product.images?.[0])}
+          alt={product.title}
+          width={500}
+          height={400}
+          className="img-fluid"
+        />
+      </div>
+
+      <h2>Related Products</h2>
+      <div className="row">
+        {relatedProducts?.length > 0 ? (
+          relatedProducts.map((rel) => (
+            <div className="col-md-3" key={rel._id}>
+              <a href={`/memorials/${rel.categorySlug}/${rel.slug}`}>
+                <Image
+                  src={getImageUrl(rel.images?.[0])}
+                  alt={rel.title}
+                  width={300}
+                  height={250}
+                  className="img-fluid"
+                />
+                <p>{rel.title}</p>
+              </a>
+            </div>
+          ))
+        ) : (
+          <p>No related products found.</p>
+        )}
+      </div>
     </div>
   );
 };
 
-export const getStaticPaths = async () => {
+export default ProductPage;
+
+export async function getStaticPaths() {
   try {
-    const res = await fetch(process.env.NEXT_PUBLIC_PRODUCTS_API_URL);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_PRODUCTS_API_URL}`);
     const data = await res.json();
 
-    const paths = data.products.map((prod) => ({
+    const paths = data?.map((product) => ({
       params: {
-        AllCategory_slug: prod.categorySlug, // Ensure this is present in your data
-        product_slug: prod.slug,
+        AllCategory_slug: product.categorySlug || 'unknown-category',
+        categorslug: product.categorySlug || 'unknown-category',
+        product_slug: product.slug,
       },
-    }));
+    })) || [];
 
-    return {
-      paths,
-      fallback: 'blocking',
-    };
-  } catch (err) {
-    console.error('Error in getStaticPaths:', err);
+    return { paths, fallback: 'blocking' };
+  } catch (error) {
+    console.error('Error in getStaticPaths:', error);
     return { paths: [], fallback: 'blocking' };
   }
-};
+}
 
-export const getStaticProps = async ({ params }) => {
+export async function getStaticProps(context) {
+  const { product_slug } = context.params;
+
   try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_PRODUCTS_DETAILS_API_URL}/${params.product_slug}`
-    );
-    const data = await res.json();
+    const res = await fetch(`${process.env.NEXT_PUBLIC_PRODUCTS_DETAILS_API_URL}/${product_slug}`);
+    if (!res.ok) throw new Error('Failed to fetch product details');
+
+    const { product, relatedProducts } = await res.json();
 
     return {
       props: {
-        product: data.product || null,
+        product,
+        relatedProducts: relatedProducts || [],
       },
-      revalidate: 60,
+      revalidate: 60, // ISR
     };
   } catch (err) {
-    console.error('Error fetching product:', err);
+    console.error('Error in getStaticProps:', err);
     return {
       props: {
-        product: null,
+        error: true,
       },
     };
   }
-};
-
-export default ProductDetailsPage;
+}
