@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export const getStaticProps = async () => {
     try {
-        const res = await fetch(process.env.NEXT_PUBLIC_CATEGORY_API_URL)
+        const res = await fetch(process.env.NEXT_PUBLIC_PRODUCT_CATEGORY_API_URL)
         if (!res.ok) {
             throw new Error('Failed to fetch categories');
         }

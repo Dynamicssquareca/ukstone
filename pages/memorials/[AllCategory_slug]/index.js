@@ -49,7 +49,7 @@ const CategoryPage = ({ category, products, error }) => {
 
 export const getStaticPaths = async () => {
   try {
-    const res = await fetch(process.env.NEXT_PUBLIC_CATEGORY_API_URL);
+    const res = await fetch(process.env.NEXT_PUBLIC_PRODUCT_CATEGORY_API_URL);
     const data = await res.json();
 
     const paths = data?.map((cat) => ({
