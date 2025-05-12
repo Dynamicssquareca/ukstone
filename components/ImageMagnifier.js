@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-
+import Image from 'next/image';
 const ImageMagnifier = ({ src, zoomScale = 2, alt = '', sliderRef }) => {
   const imgRef = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -73,11 +73,13 @@ const ImageMagnifier = ({ src, zoomScale = 2, alt = '', sliderRef }) => {
         onMouseLeave={handleMouseLeave}
         onMouseMove={handleMouseMove}
       >
-        <img
+        <Image
           ref={imgRef}
           src={src}
           alt={alt}
           style={{ maxWidth: '100%', display: 'block' }}
+          width={800} // Adjust as needed
+          height={800} // Adjust as needed
         />
       </div>
 

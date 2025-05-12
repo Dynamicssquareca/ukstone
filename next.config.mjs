@@ -6,20 +6,27 @@ const nextConfig = {
   output: "standalone",
   env: {
     NEXT_PUBLIC_SITE_URL:'https://www.crmfrontier.com/',
-    NEXT_PUBLIC_BLOG_API_URL:'https://crmfoceplus-backend.onrender.com/api/frontend/blogs',
-    NEXT_PUBLIC_BLOG_PREVIEW_API_URL:'https://crmfoceplus-backend.onrender.com/api/frontend/blogs/preview',
-    NEXT_PUBLIC_CATEGORY_API_URL:'https://crmfoceplus-backend.onrender.com/api/frontend/blog/categories',
-    NEXT_PUBLIC_AUTHOR_API_URL:'https://crmfoceplus-backend.onrender.com/api/frontend/blog/authors',
-    NEXT_PUBLIC_AUTHOR_BLOG_API_URL:'https://crmfoceplus-backend.onrender.com/api/frontend/blogs/author/',
-    NEXT_PUBLIC_BLOG_API_Image:'https://crmfoceplus-backend.onrender.com/uploads',
-    NEXT_PUBLIC_BLOG_API_Image_profilePics:'https://crmfoceplus-backend.onrender.com/uploads'
+    NEXT_PUBLIC_MAIN_API_URL:'https://stonediscoveruk-apibackend.onrender.com/api/frontend',
+    NEXT_PUBLIC_PRODUCTS_API_URL:'https://stonediscoveruk-apibackend.onrender.com/api/frontend/products',
+    NEXT_PUBLIC_PRODUCTS_DETAILS_API_URL:'https://stonediscoveruk-apibackend.onrender.com/api/frontend/productdetails',
+    NEXT_PUBLIC_CATEGORY_API_URL:'https://stonediscoveruk-apibackend.onrender.com/api/frontend/categories',
+    NEXT_PUBLIC_CATEGORY_CHILD_API_URL:'https://stonediscoveruk-apibackend.onrender.com/api/frontend/productscategory',
+    NEXT_PUBLIC_DETSILS_URL:'https://stonediscoveruk-apibackend.onrender.com/api/frontend/categorydetails',
+    NEXT_PUBLIC_IMAGE:'https://stonediscoveruk-apibackend.onrender.com/uploads'
+    // NEXT_PUBLIC_BLOG_API_URL:'https://crmfoceplus-backend.onrender.com/api/frontend/blogs',
+    // NEXT_PUBLIC_BLOG_PREVIEW_API_URL:'https://crmfoceplus-backend.onrender.com/api/frontend/blogs/preview',
+    // NEXT_PUBLIC_CATEGORY_API_URL:'https://crmfoceplus-backend.onrender.com/api/frontend/blog/categories',
+    // NEXT_PUBLIC_AUTHOR_API_URL:'https://crmfoceplus-backend.onrender.com/api/frontend/blog/authors',
+    // NEXT_PUBLIC_AUTHOR_BLOG_API_URL:'https://crmfoceplus-backend.onrender.com/api/frontend/blogs/author/',
+    // NEXT_PUBLIC_BLOG_API_Image:'https://crmfoceplus-backend.onrender.com/uploads',
+    // NEXT_PUBLIC_BLOG_API_Image_profilePics:'https://crmfoceplus-backend.onrender.com/uploads'
   },
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "crmfoceplus-backend.onrender.com",
+        protocol: "https",  
+        hostname: "stonediscoveruk-apibackend.onrender.com",
         port: "",
         pathname: "/**",
       },
