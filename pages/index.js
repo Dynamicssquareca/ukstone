@@ -18,7 +18,7 @@ export default function Home() {
           src="/img/banner/hero-banner-two.png"
           alt="Hero Banner"
           fill
-          style={{ objectFit: 'cover', objectPosition: 'center' }}
+          style={{ objectFit: 'cover', objectPosition: 'center bottom' }}
           priority
           className='desh-top'
         />
@@ -27,7 +27,7 @@ export default function Home() {
           alt="Hero Banner"
           fill
           className='mobile-top'
-          style={{ objectFit: 'cover', objectPosition: 'center' }}
+          style={{ objectFit: 'cover', objectPosition: 'center bottom' }}
           priority
         />
 

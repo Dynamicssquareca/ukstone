@@ -39,11 +39,29 @@ const ProductPage = ({ product, relatedProducts, error }) => {
       setOpenone(id);
     }
   };
-
+  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}memorials/${product.category.slug}/${product.slug}/`;
+  const CanImageUrl = (img) => {
+    if (!img) return '';
+    if (img.startsWith('http')) return img;
+    return `${process.env.NEXT_PUBLIC_IMAGE.replace(/\/$/, '')}/${img.replace(/^\//, '')}`;
+  };
   return (
     <>
       <Head>
         <title>{product.metaTitle || product.title}</title>
+        <meta name="description" content={product.metaDescription || product.excerpt || ''} />
+        <link rel="canonical" href={canonicalUrl} />
+        {product.metaKeywords && <meta name="keywords" content={product.metaKeywords} />}
+        <meta property="og:title" content={product.metaTitle || product.title} />
+        <meta property="og:description" content={product.metaDescription || product.excerpt || ''} />
+        <meta
+          property="og:image"
+          content={
+            product.featuredimage
+              ? CanImageUrl(product.featuredimage)
+              : `${process.env.NEXT_PUBLIC_SITE_URL}img/banner/home-main-banner.png`
+          }
+        />
       </Head>
       <div className='container m-t-40'>
         <div className='row'>

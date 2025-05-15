@@ -298,8 +298,9 @@ ul li {
 /*hreo banner one*/
 
 .hero-banner-one {
-  padding: 40px 40px 160px;
-  position:relative
+padding: 60px 0px 0px 0px;
+    position: relative;
+   height: calc(95vh - 20px);
 }
 .hero-banner-content {
   /* -webkit-backdrop-filter: blur(25px);

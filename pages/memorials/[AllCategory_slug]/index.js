@@ -8,6 +8,9 @@ import { useRouter } from 'next/router';
 const getImageUrl = (img) =>
   img ? `${process.env.NEXT_PUBLIC_IMAGE}/${img}` : '/img/webpages/product-01.jpg'
 
+const getImageUrlBanner = (img) =>
+  img ? `${process.env.NEXT_PUBLIC_IMAGE}/${img}` : '/img/webpages/product-01.jpg'
+
 const CategoryPage = ({ category, products, faq, error }) => {
   if (error) {
     return <p className="text-danger">{error}</p>;
@@ -76,7 +79,13 @@ const CategoryPage = ({ category, products, faq, error }) => {
             </div>
             <div className='col-lg-6'>
               <div className='hero-banner-two-image'>
-                <img src="/img/banner/single-page-01.png" alt="single-page-0" />
+                 <Image
+                        width={563}
+                        height={563}
+                        src={getImageUrlBanner(category.image)}
+                        alt={category.title}
+                        className="img-fluid"
+                      />
               </div>
             </div>
           </div>
@@ -116,7 +125,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
                 <div className="card-06">
                   <div className="card-06-item">
                     <a href={`/memorials/${category.slug}/${product.slug}`}>
-                      <img
+                      <Image
                         width={300}
                         height={200}
                         src={getImageUrl(product.images?.[0])}

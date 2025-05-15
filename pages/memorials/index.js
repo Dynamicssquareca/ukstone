@@ -108,7 +108,7 @@ const Index = ({ categories }) => {
                                             <div className="card-06-item">
                                                 <a href={`/memorials/${category.slug}/`}>
                                                     <Image
-                                                        src={getImageUrl(category.image)}
+                                                        src={getImageUrl(category.categoryicon)}
                                                         alt={category.name}
                                                         className="img-fluid"
                                                         width={300}
