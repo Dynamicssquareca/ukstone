@@ -1434,4 +1434,17 @@ font-size:48px
     height:80vh;
     padding: 40px 0px;
   }
+  .d-flex-model .model-left{
+    display: none;
+  }
+  .d-flex-model .model-rigt{
+    max-width:100%;
+    flex: 100%;
+  }
+  .d-flex-model .model-rigt{
+    padding: 20px 0px 20px 0px;
+  }
+  .form-one{
+    padding: 20px 15px;
+  }
 }
