@@ -61,11 +61,11 @@ const FaqAccordion = ({ faqList = [] }) => {
           ))}
         </Accordion>
       </div>
-      <div className="text-right-row">
+      {/* <div className="text-right-row">
         <a href="/" className="btn btn-four m-t-30">
           Read More
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };

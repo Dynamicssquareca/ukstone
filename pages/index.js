@@ -133,32 +133,32 @@ export default function Home() {
               <div className='card-02'>
                 <div className='card-02-item'>
                   <a href="/memorials/">
-                    <Image src='/img/webpages/pic-01.png' alt='About Us' className='img-fluid' width={256} height={471} />
-                    <h3>Book Shaped</h3>
+                    <Image src='/img/webpages/pic-01.png' alt='Book Headstone' className='img-fluid' width={256} height={471} />
+                    <h3>Book Headstone</h3>
                   </a>
                 </div>
                 <div className='card-02-item'>
-                  <a href="/memorials/">
-                    <Image src='/img/webpages/pic-02.png' alt='About Us' className='img-fluid' width={256} height={471} />
-                    <h3>Heart Shaped</h3>
+                  <a href="/memorials/heart-headstones/">
+                    <Image src='/img/webpages/pic-02.png' alt='Heart Headstone' className='img-fluid' width={256} height={471} />
+                    <h3>Heart Headstone</h3>
                   </a>
                 </div>
                 <div className='card-02-item'>
-                  <a href="/memorials/">
-                    <Image src='/img/webpages/pic-03.png' alt='About Us' className='img-fluid' width={256} height={471} />
+                  <a href="/memorials/headstones/">
+                    <Image src='/img/webpages/pic-03.png' alt='Headstones' className='img-fluid' width={256} height={471} />
                     <h3>Headstones</h3>
                   </a>
                 </div>
                 <div className='card-02-item'>
-                  <a href="/memorials/">
-                    <Image src='/img/webpages/pic-04.png' alt='About Us' className='img-fluid' width={256} height={471} />
+                  <a href="/memorials/angel-headstones/">
+                    <Image src='/img/webpages/pic-04.png' alt='Angels Headstone' className='img-fluid' width={256} height={471} />
                     <h3>Angels Headstone</h3>
                   </a>
                 </div>
                 <div className='card-02-item'>
-                  <a href="/memorials/">
-                    <Image src='/img/webpages/pic-05.png' alt='About Us' className='img-fluid' width={256} height={471} />
-                    <h3>Vases</h3>
+                  <a href="/memorials/vases-and-urns/">
+                    <Image src='/img/webpages/pic-05.png' alt='Vases' className='img-fluid' width={256} height={471} />
+                    <h3>Vases & Urns</h3>
                   </a>
                 </div>
               </div>

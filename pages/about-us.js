@@ -30,22 +30,20 @@ export default function About() {
             <section className='about-us-section p-b-60 p-t-80'>
                 <div className='container'>
                     <div className='row'>
-                        <div className='col-lg-6'>
-                            <div className='about-us-content'>
-                                <h2>About Us</h2>
-                                <p>Stone Discover UK is a trusted name in the memorial industry, dedicated to supplying memorial stones all over the United Kingdom. Whether you are looking for an Ogee, Kerb set, Heart-shaped, or Angel memorial, we have a wide range of memorials to suit all kinds of needs.</p>
-
-                                <p>Our skilled professionals ensure that each piece is thoughtfully designed and crafted with care and precision, reflecting the memory of the deceased. We also do custom designs by adding memorial flower vases and graveside ornaments to add a personal touch to the memorial.</p>
-                                <p>With warehouses in Liverpool and Southampton, we ensure safe packaging and prompt delivery. Please feel free to visit our showrooms for any queries or further guidance.</p>
-                                <a href='/' className='btn btn-four m-t-30'>Read More</a>
-                            </div>
-                        </div>
-
-                        <div className='col-lg-6'>
+                         <div className='col-lg-6'>
                             <div className='about-us-image'>
                                 <Image src='/img/webpages/about-us-pic.png' alt='About Us' className='img-fluid' width={553} height={545} />
                             </div>
                         </div>
+                        <div className='col-lg-6'>
+                            <div className='about-us-content'>
+                                <h2>Stone Discover – The Largest Wholesalers of Granite Monuments in the UK</h2>
+                                <p>Stone Discover is one of the largest suppliers of wholesale granite memorials across the United Kingdom. We have been in the stone industry since 1984 and have been providing exceptional experience with our products worldwide.</p>
+                                <p>With over a decade of experience in the import business, we have built a huge customer base by delivering excellence every time. We make sure that our dealers and fabricators get the finest quality granite memorials at the most competitive pricing. With safe packaging and countless checks, you get reliable delivery and a seamless service experience.</p>
+                                <a href='/' className='btn btn-four m-t-30'>Read More</a>
+                            </div>
+                        </div>
+                       
                     </div>
                 </div>
             </section>
