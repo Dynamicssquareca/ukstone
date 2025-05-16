@@ -1066,20 +1066,22 @@ font-size:48px
 }
 .product-size-info ul li {
   margin-bottom: 10px;
+  display: flex;
+gap:2px
 }
 .product-size-info ul li .p-name {
   font-size: 16px;
   color: #000;
   display: inline-block;
-  width: 10%;
-  font-weight: 500;
+  width: 20%;
+  font-weight: 600;
 }
 .product-size-info ul li .p-n-s {
   width: 3%;
   display: inline-block;
 }
 .product-size-info ul li .p-info {
-  width: 75%;
+  width: 65%;
   display: inline-block;
 }
 .product-dis .form-left {
