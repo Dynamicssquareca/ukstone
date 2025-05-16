@@ -16,7 +16,7 @@ import ModelBox from '@/components/ModelBox';
 const getImageUrl = (img) =>
   img ? `${process.env.NEXT_PUBLIC_IMAGE}/${img}` : '/img/webpages/product-01.jpg';
 
-const ProductPage = ({ product, relatedProducts, error }) => {
+const ProductPage = ({ product, relatedProducts,specifications, error }) => {
   if (error) {
     return <div className="container py-5 text-center">Error loading product. Please try again later.</div>;
   }
@@ -99,7 +99,7 @@ const ProductPage = ({ product, relatedProducts, error }) => {
 
                   <div dangerouslySetInnerHTML={{ __html: product.description }}></div>
                 </div>
-                <div className='product-size-info '>
+                {/* <div className='product-size-info '>
                   <ul>
                     <li>
                       <span className='p-name'>Color</span>
@@ -127,6 +127,21 @@ const ProductPage = ({ product, relatedProducts, error }) => {
                       <span className='p-info'>Get a Quote</span>
                     </li>
                   </ul>
+                </div> */}
+                <div className='product-size-info'>
+                  {product.specifications?.length > 0 ? (
+                    <ul>
+                      {product.specifications.map((item) => (
+                        <li key={item._id}>
+                          <span className='p-name'>{item.label}</span>
+                          <span className='p-n-s'>:</span>
+                          <span className='p-info'>{item.value}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>No specifications available.</p>
+                  )}
                 </div>
                 <div class="m-t-40 m-b-30"> <ModelBox className='btn-three' headerText="Scale Your Store! " buttonText="Request a Quote " />
                 </div>
