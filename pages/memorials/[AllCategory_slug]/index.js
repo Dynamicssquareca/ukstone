@@ -163,73 +163,93 @@ const CategoryPage = ({ category, products, faq, error }) => {
             </div>
           </div>
           <div className='row'>
-            <div className='col-lg-6'>
-              <div className='partner-pic'>
-                <img src='/img/webpages/partent-side-pic.jpg' alt='partent-side-pic' />
-              </div>
-            </div>
-            <div className='col-lg-6 align-self-center'>
-              <div className='form-left'>
-                <div className='accordion-one accordion-one-product'>
-                  <Accordion open={open} toggle={toggle}>
-                    <AccordionItem>
-                      <AccordionHeader targetId="1">
-                        <div className="d-flex justify-content-between align-items-center w-100">
-                          <h3><img src='/img/icons/faq-icon-01.png' alt='faq-icon' />What types of memorials do you supply?</h3>
-                          {/* <span className={`icon ${open === '1' ? 'open' : 'closed'}`}>
-                                                    {open === '1' ? '-' : '+'}
-                                                </span> */}
-                        </div>
-                      </AccordionHeader>
-                      <AccordionBody accordionId="1">
-                        <p>Salesforce integration services are a way to enhance operational harmony by fostering data synchronization and improved collaboration among the various business processes. </p>
-                      </AccordionBody>
-                    </AccordionItem>
-                    <AccordionItem>
-                      <AccordionHeader targetId="2">
-                        <div className="d-flex justify-content-between align-items-center w-100">
-                          <h3><img src='/img/icons/faq-icon-02.png' alt='faq-icon' />Consistent Quality, Every Time</h3>
-                          {/* <span className={`icon ${open === '1' ? 'open' : 'closed'}`}>
-                                                    {open === '1' ? '-' : '+'}
-                                                </span> */}
-                        </div>
-                      </AccordionHeader>
-                      <AccordionBody accordionId="2">
-                        <p>Salesforce integration services are a way to enhance operational harmony by fostering data synchronization and improved collaboration among the various business processes. </p>
-                      </AccordionBody>
-                    </AccordionItem>
-                    <AccordionItem>
-                      <AccordionHeader targetId="3">
-                        <div className="d-flex justify-content-between align-items-center w-100">
-                          <h3><img src='/img/icons/faq-icon-03.png' alt='faq-icon' />Custom Shapes & Sizes</h3>
-                          {/* <span className={`icon ${open === '1' ? 'open' : 'closed'}`}>
-                                                    {open === '1' ? '-' : '+'}
-                                                </span> */}
-                        </div>
-                      </AccordionHeader>
-                      <AccordionBody accordionId="3">
-                        <p>Salesforce integration services are a way to enhance operational harmony by fostering data synchronization and improved collaboration among the various business processes. </p>
-                      </AccordionBody>
-                    </AccordionItem>
-                    <AccordionItem>
-                      <AccordionHeader targetId="4">
-                        <div className="d-flex justify-content-between align-items-center w-100">
-                          <h3><img src='/img/icons/faq-icon-04.png' alt='faq-icon' />Seamless Logistics & Delivery</h3>
-                          {/* <span className={`icon ${open === '1' ? 'open' : 'closed'}`}>
-                                                    {open === '1' ? '-' : '+'}
-                                                </span> */}
-                        </div>
-                      </AccordionHeader>
-                      <AccordionBody accordionId="4">
-                        <p>Salesforce integration services are a way to enhance operational harmony by fostering data synchronization and improved collaboration among the various business processes. </p>
-                      </AccordionBody>
-                    </AccordionItem>
-
-                  </Accordion>
-                </div>
-              </div>
-            </div>
-          </div>
+                                  <div className='col-lg-6'>
+                                      <div className='partner-pic'>
+                                          <img src='/img/webpages/partent-side-pic.jpg' alt='partent-side-pic' />
+                                      </div>
+                                  </div>
+                                  <div className='col-lg-6 align-self-center'>
+                                      <div className='form-left'>
+                                          <div className='accordion-one accordion-one-product'>
+                                              <Accordion open={open} toggle={toggle}>
+                                                  <AccordionItem>
+                                                      <AccordionHeader targetId="1">
+                                                          <div className="d-flex justify-content-between align-items-center w-100">
+                                                              <h3><img src='/img/icons/faq-icon-01.png' alt='faq-icon' />Direct Manufacturer Advantage</h3>
+                                                              {/* <span className={`icon ${open === '1' ? 'open' : 'closed'}`}>
+                                                              {open === '1' ? '-' : '+'}
+                                                          </span> */}
+                                                          </div>
+                                                      </AccordionHeader>
+                                                      <AccordionBody accordionId="1">
+                                                          <p>We manage our own production facilities in India, allowing us to offer:</p>
+                                                          <ul>
+                                                              <li>Competitive B2B pricing</li>
+                                                              <li>Flexible customization options</li>
+                                                              <li>Faster Deliveries with smooth logistics</li>
+                                                          </ul>
+                                                      </AccordionBody>
+                                                  </AccordionItem>
+                                                  <AccordionItem>
+                                                      <AccordionHeader targetId="2">
+                                                          <div className="d-flex justify-content-between align-items-center w-100">
+                                                              <h3><img src='/img/icons/faq-icon-02.png' alt='faq-icon' />Consistent Quality, Every Time</h3>
+                                                              {/* <span className={`icon ${open === '1' ? 'open' : 'closed'}`}>
+                                                              {open === '1' ? '-' : '+'}
+                                                          </span> */}
+                                                          </div>
+                                                      </AccordionHeader>
+                                                      <AccordionBody accordionId="2">
+                                                          <p>Our tombstones are crafted from premium-grade Indian granite, renowned for its durability and timeless appeal. Every piece is quality-checked to ensure consistent finishing, accurate dimensions, and enduring aesthetics.</p>
+                                                          <p><b>Bespoke Designs</b></p>
+                                                          <p>We support customizations including:</p>
+                                                          <ul>
+                                                              <li>Headstones</li>
+                                                              <li>Kerbsets</li>
+                                                              <li>Vases and Urns</li>
+                                                              <li>Angel Memorials</li>
+                                                              <li>hildren Memorials</li>
+                                                              <li>All with engraving-ready finishes</li>
+                                                          </ul>
+                                                      </AccordionBody>
+                                                  </AccordionItem>
+                                                  <AccordionItem>
+                                                      <AccordionHeader targetId="3">
+                                                          <div className="d-flex justify-content-between align-items-center w-100">
+                                                              <h3><img src='/img/icons/faq-icon-03.png' alt='faq-icon' />Seamless Logistics & Delivery</h3>
+                                                              {/* <span className={`icon ${open === '1' ? 'open' : 'closed'}`}>
+                                                              {open === '1' ? '-' : '+'}
+                                                          </span> */}
+                                                          </div>
+                                                      </AccordionHeader>
+                                                      <AccordionBody accordionId="3">
+                                                          <p>With our warehouses located in Liverpool and Southampton, we guarantee:</p>
+                                                          <ul>
+                                                              <li>On-time delivery</li>
+                                                              <li>Proper transport coordination</li>
+                                                              <li>Hassle-free customs handling</li>
+                                                          </ul>
+                                                      </AccordionBody>
+                                                  </AccordionItem>
+                                                  <AccordionItem>
+                                                      <AccordionHeader targetId="4">
+                                                          <div className="d-flex justify-content-between align-items-center w-100">
+                                                              <h3><img src='/img/icons/faq-icon-04.png' alt='faq-icon' />Partner with a Reliable Tombstone Exporter</h3>
+                                                              {/* <span className={`icon ${open === '1' ? 'open' : 'closed'}`}>
+                                                              {open === '1' ? '-' : '+'}
+                                                          </span> */}
+                                                          </div>
+                                                      </AccordionHeader>
+                                                      <AccordionBody accordionId="4">
+                                                          <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products, but trust, consistency, and partnership.</p>
+                                                      </AccordionBody>
+                                                  </AccordionItem>
+          
+                                              </Accordion>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
         </div>
       </section>
 

@@ -16,7 +16,7 @@ import ModelBox from '@/components/ModelBox';
 const getImageUrl = (img) =>
   img ? `${process.env.NEXT_PUBLIC_IMAGE}/${img}` : '/img/webpages/product-01.jpg';
 
-const ProductPage = ({ product, relatedProducts,specifications, error }) => {
+const ProductPage = ({ product, relatedProducts, specifications, error }) => {
   if (error) {
     return <div className="container py-5 text-center">Error loading product. Please try again later.</div>;
   }
@@ -272,7 +272,7 @@ const ProductPage = ({ product, relatedProducts,specifications, error }) => {
           <div className='row'>
             <div className='col-lg-6'>
               <div className='partner-pic'>
-                <Image src='/img/webpages/partent-side-pic.jpg' width={555} height={440} alt='partent-side-pic' />
+                <img src='/img/webpages/partent-side-pic.jpg' alt='partent-side-pic' />
               </div>
             </div>
             <div className='col-lg-6 align-self-center'>
@@ -282,53 +282,73 @@ const ProductPage = ({ product, relatedProducts,specifications, error }) => {
                     <AccordionItem>
                       <AccordionHeader targetId="1">
                         <div className="d-flex justify-content-between align-items-center w-100">
-                          <h3><Image src='/img/icons/faq-icon-01.png' alt='faq-icon' width={36} height={36} />What types of memorials do you supply?</h3>
+                          <h3><img src='/img/icons/faq-icon-01.png' alt='faq-icon' />Direct Manufacturer Advantage</h3>
                           {/* <span className={`icon ${open === '1' ? 'open' : 'closed'}`}>
-                                                    {open === '1' ? '-' : '+'}
-                                                </span> */}
+                                                              {open === '1' ? '-' : '+'}
+                                                          </span> */}
                         </div>
                       </AccordionHeader>
                       <AccordionBody accordionId="1">
-                        <p>Salesforce integration services are a way to enhance operational harmony by fostering data synchronization and improved collaboration among the various business processes. </p>
+                        <p>We manage our own production facilities in India, allowing us to offer:</p>
+                        <ul>
+                          <li>Competitive B2B pricing</li>
+                          <li>Flexible customization options</li>
+                          <li>Faster Deliveries with smooth logistics</li>
+                        </ul>
                       </AccordionBody>
                     </AccordionItem>
                     <AccordionItem>
                       <AccordionHeader targetId="2">
                         <div className="d-flex justify-content-between align-items-center w-100">
-                          <h3><Image src='/img/icons/faq-icon-02.png' alt='faq-icon' width={36} height={36} />Consistent Quality, Every Time</h3>
+                          <h3><img src='/img/icons/faq-icon-02.png' alt='faq-icon' />Consistent Quality, Every Time</h3>
                           {/* <span className={`icon ${open === '1' ? 'open' : 'closed'}`}>
-                                                    {open === '1' ? '-' : '+'}
-                                                </span> */}
+                                                              {open === '1' ? '-' : '+'}
+                                                          </span> */}
                         </div>
                       </AccordionHeader>
                       <AccordionBody accordionId="2">
-                        <p>Salesforce integration services are a way to enhance operational harmony by fostering data synchronization and improved collaboration among the various business processes. </p>
+                        <p>Our tombstones are crafted from premium-grade Indian granite, renowned for its durability and timeless appeal. Every piece is quality-checked to ensure consistent finishing, accurate dimensions, and enduring aesthetics.</p>
+                        <p><b>Bespoke Designs</b></p>
+                        <p>We support customizations including:</p>
+                        <ul>
+                          <li>Headstones</li>
+                          <li>Kerbsets</li>
+                          <li>Vases and Urns</li>
+                          <li>Angel Memorials</li>
+                          <li>hildren Memorials</li>
+                          <li>All with engraving-ready finishes</li>
+                        </ul>
                       </AccordionBody>
                     </AccordionItem>
                     <AccordionItem>
                       <AccordionHeader targetId="3">
                         <div className="d-flex justify-content-between align-items-center w-100">
-                          <h3><Image src='/img/icons/faq-icon-03.png' alt='faq-icon' width={36} height={36} />Custom Shapes & Sizes</h3>
+                          <h3><img src='/img/icons/faq-icon-03.png' alt='faq-icon' />Seamless Logistics & Delivery</h3>
                           {/* <span className={`icon ${open === '1' ? 'open' : 'closed'}`}>
-                                                    {open === '1' ? '-' : '+'}
-                                                </span> */}
+                                                              {open === '1' ? '-' : '+'}
+                                                          </span> */}
                         </div>
                       </AccordionHeader>
                       <AccordionBody accordionId="3">
-                        <p>Salesforce integration services are a way to enhance operational harmony by fostering data synchronization and improved collaboration among the various business processes. </p>
+                        <p>With our warehouses located in Liverpool and Southampton, we guarantee:</p>
+                        <ul>
+                          <li>On-time delivery</li>
+                          <li>Proper transport coordination</li>
+                          <li>Hassle-free customs handling</li>
+                        </ul>
                       </AccordionBody>
                     </AccordionItem>
                     <AccordionItem>
                       <AccordionHeader targetId="4">
                         <div className="d-flex justify-content-between align-items-center w-100">
-                          <h3><Image src='/img/icons/faq-icon-04.png' alt='faq-icon' width={36} height={36} />Seamless Logistics & Delivery</h3>
+                          <h3><img src='/img/icons/faq-icon-04.png' alt='faq-icon' />Partner with a Reliable Tombstone Exporter</h3>
                           {/* <span className={`icon ${open === '1' ? 'open' : 'closed'}`}>
-                                                    {open === '1' ? '-' : '+'}
-                                                </span> */}
+                                                              {open === '1' ? '-' : '+'}
+                                                          </span> */}
                         </div>
                       </AccordionHeader>
                       <AccordionBody accordionId="4">
-                        <p>Salesforce integration services are a way to enhance operational harmony by fostering data synchronization and improved collaboration among the various business processes. </p>
+                        <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products, but trust, consistency, and partnership.</p>
                       </AccordionBody>
                     </AccordionItem>
 
