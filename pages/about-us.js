@@ -185,7 +185,7 @@ export default function About() {
             </section>
 
           
-            <section className='p-b-30'>
+            <section className='p-b-30 p-t-60'>
                 <div className='container'>
                     <div className='row justify-content-center'>
                         <div className='col-lg-9'>
@@ -242,19 +242,6 @@ export default function About() {
                     </div>
                 </div>
             </section>
-
-            {/* <section className='faq'>
-        <div className='container'>
-          <div className='row justify-content-center'>
-            <div className='col-lg-9'>
-              <div className='heading-center p-b-40'>
-                <h2 className='m-b-30'>Frequently Asked <span>Questions</span></h2>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section> */}
 
 
 
