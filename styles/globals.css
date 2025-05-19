@@ -298,9 +298,9 @@ ul li {
 /*hreo banner one*/
 
 .hero-banner-one {
-padding: 60px 0px 0px 0px;
+padding: 30px 0px 0px 0px;
     position: relative;
-   height: calc(95vh - 20px);
+   height: calc(98vh - 20px);
 }
 .hero-banner-content {
   /* -webkit-backdrop-filter: blur(25px);
