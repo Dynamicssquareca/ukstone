@@ -143,7 +143,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
                     <p>No specifications available.</p>
                   )}
                 </div>
-                <div class="m-t-40 m-b-30"> <ModelBox className='btn-three' headerText="Scale Your Store! " buttonText="Request a Quote " />
+                <div className="m-t-40 m-b-30"> <ModelBox className='btn-three' headerText="Scale Your Store! " buttonText="Request a Quote " />
                 </div>
 
                 <div className='product-dis'>

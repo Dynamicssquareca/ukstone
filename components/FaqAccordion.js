@@ -7,7 +7,7 @@ import {
 } from 'reactstrap';
 
 const FaqAccordion = ({ faqList = [] }) => {
-  console.log(faqList)
+  // console.log(faqList)
   const [open, setOpen] = useState('1');
   const toggle = (id) => {
     setOpen(open === id ? undefined : id);
