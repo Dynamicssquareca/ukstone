@@ -20,7 +20,7 @@ const ThankYou = () => {
                     <div className="hero-content">
                         <h1>Thank You !</h1>
                        <p>Thanks for getting in touch - someone will contact you soon!</p>
-                       <a className="btn btn-prime" href='/'>Back to Home</a>
+                       <a className="btn btn-one" href='/'>Back to Home</a>
                     </div>
                 </div>
             </div>

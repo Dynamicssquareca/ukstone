@@ -92,7 +92,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
         </div>
       </div>
 
-      <section className='about-us-section p-t-80 p-b-40'>
+      <section className='about-us-section p-t-80 p-b-40 p-t-40'>
         <div className='container'>
           <div className='row'>
 
@@ -115,7 +115,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
 
 
 
-      <div className="container py-4">
+      <div className="container py-4 m-p-08">
 
         <div className="row mt-4">
           <div className='col-lg-12'>
@@ -254,7 +254,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
       </section>
 
 
-      <section className='p-b-100 p-t-80'>
+      <section className='p-b-100 p-t-80 m-p-07'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-9'>
@@ -329,7 +329,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
         </div>
       </section>
 
-      <section className='p-t-20'>
+      <section className='p-t-20 '>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-9'>
@@ -348,7 +348,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
       </section>
 
 
-      <section className='p-b-30 p-t-80'>
+      <section className='p-b-30 p-t-80 m-p-09'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-9'>

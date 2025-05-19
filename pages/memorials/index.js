@@ -69,7 +69,7 @@ const Index = ({ categories }) => {
                     </div>
                 </div>
             </div>
-            <section className='about-us-section p-t-80 p-b-40'>
+            <section className='about-us-section p-t-80 p-b-40 m-p-05'>
                 <div className='container'>
                     <div className='row'>
 
@@ -92,7 +92,7 @@ const Index = ({ categories }) => {
                 </div>
             </section>
 
-            <section className='p-b-80 p-t-40'>
+            <section className='p-b-80 p-t-40 m-p-06'>
                 <div className='container'>
                     <div className='row'>
                         <div className='col-lg-12'>
@@ -229,7 +229,7 @@ const Index = ({ categories }) => {
             </section>
 
 
-            <section className='p-b-100 p-t-80'>
+            <section className='p-b-100 p-t-80 m-p-07'>
                 <div className='container'>
                     <div className='row justify-content-center'>
                         <div className='col-lg-9'>

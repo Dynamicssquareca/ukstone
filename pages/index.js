@@ -90,7 +90,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='p-t-40 p-b-40'>
+      <section className='p-t-40 p-b-40 m-p-30'>
         <div className='container'>
           <div className='row'>
             <div className='col-lg-4 d-flex'>
@@ -118,7 +118,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='products-section-one'>
+      <section className='products-section-one m-p-02'>
         <div className='container'>
           <div className='row'>
             <div className='col-lg-12 text-center'>
@@ -167,7 +167,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='content-section-two p-b-80 p-t-100'>
+      <section className='content-section-two p-b-80 p-t-100 m-p-03'>
         <div className='container'>
           <div className='row'>
             <div className='col-lg-6 align-items-center'>
@@ -199,7 +199,7 @@ export default function Home() {
 
       </section>
 
-      <section className='p-b-100'>
+      <section className='p-b-100 m-p-04'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-9'>

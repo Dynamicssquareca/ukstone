@@ -175,7 +175,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
         </div>
       </div>
 
-      <section className='p-t-100'>
+      <section className='p-t-100 p-t-40'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-9'>
@@ -219,7 +219,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
 
 
 
-      <section className='p-b-100 p-t-100'>
+      <section className='p-b-100 p-t-100 m-p-07'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-9'>
@@ -360,7 +360,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
         </div>
       </section>
 
-      <section className='p-b-100 p-t-80'>
+      <section className='p-b-100 p-t-80 m-p-07'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-9'>

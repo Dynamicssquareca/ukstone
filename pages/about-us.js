@@ -34,7 +34,7 @@ export default function About() {
 
 
 
-            <section className='about-us-section p-b-60 p-t-80'>
+            <section className='about-us-section p-b-60 p-t-80 p-b-40 '>
                 <div className='container'>
                     <div className='row'>
                         <div className='col-lg-6'>
@@ -59,7 +59,7 @@ export default function About() {
 
 
 
-            <section className='content-section-two p-b-80 p-t-60'>
+            <section className='content-section-two p-b-80 p-t-60 m-p-08 m-p-06'>
                 <div className='container'>
                     <div className='row'>
 
@@ -81,7 +81,7 @@ export default function About() {
                 </div>
 
             </section>
-            <section className='content-section-two p-b-80 p-t-60'>
+            <section className='content-section-two p-b-80 p-t-60 m-p-07'>
                 <div className='container'>
                     <div className='row'>
 
@@ -205,7 +205,7 @@ export default function About() {
             </section>
 
 
-            <section className='p-b-30 p-t-60'>
+            <section className='p-b-30 p-t-60 m-p-07'>
                 <div className='container'>
                     <div className='row justify-content-center'>
                         <div className='col-lg-9'>
@@ -245,7 +245,7 @@ export default function About() {
                     </div>
                 </div>
             </section>
-            <section className='p-t-80'>
+            <section className='p-t-80 m-p-07'>
                 <div className='container'>
                     <div className='row justify-content-center'>
                         <div className='col-lg-9'>
