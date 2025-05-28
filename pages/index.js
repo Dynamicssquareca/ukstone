@@ -156,9 +156,9 @@ export default function Home() {
                   </a>
                 </div>
                 <div className='card-02-item'>
-                  <a href="/memorials/vases-and-urns/">
+                  <a href="/memorials/vases/">
                     <Image src='/img/webpages/pic-05.png' alt='Vases' className='img-fluid' width={256} height={471} />
-                    <h3>Vases & Urns</h3>
+                    <h3>Vases</h3>
                   </a>
                 </div>
               </div>
