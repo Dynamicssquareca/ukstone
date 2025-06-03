@@ -183,7 +183,8 @@ const Form = ({ onSubmit }) => {
 
   const isValidEmail = (email) => {
     // Basic email format validation
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!yahoo.co.in)(?!aol.com)(?!live.com)(?!outlook.com)[a-zA-Z0-9_-]+\.[a-zA-Z0-9-.]{2,61}$/;
+    // const emailRegex = /^[a-zA-Z0-9._%+-]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!yahoo.co.in)(?!aol.com)(?!live.com)(?!outlook.com)[a-zA-Z0-9_-]+\.[a-zA-Z0-9-.]{2,61}$/;
+     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailRegex.test(email);
   };
 
@@ -207,7 +208,7 @@ const Form = ({ onSubmit }) => {
   }, [redirectTimer]);
 
   return (
-    <form className="form-one" onSubmit={handleSubmit} autoComplete="off">
+    <form className="form-one" onSubmit={handleSubmit}>
       <div className="form-group">
         <input
           type="text"
@@ -215,7 +216,6 @@ const Form = ({ onSubmit }) => {
           name="name"
           placeholder=""
           value={name}
-          autoComplete="new-password"
           onChange={(e) => {
             setName(e.target.value);
             if (errors.name) {
@@ -247,7 +247,6 @@ const Form = ({ onSubmit }) => {
           name="email"
           placeholder=""
           value={email}
-          autoComplete="new-password"
           onChange={(e) => {
             setEmail(e.target.value);
             if (errors.email) {
@@ -270,7 +269,6 @@ const Form = ({ onSubmit }) => {
         <PhoneInput
           country={defaultCountryCode} // Set default country code
           value={phone}
-          autoComplete="new-password"
           onChange={(value, data) => {
             setPhone(value);
             setDefaultCountryCode(data?.name || ""); // Update the default country code
@@ -307,7 +305,6 @@ const Form = ({ onSubmit }) => {
           name="companyname"
           placeholder=""
           value={company}
-          autoComplete="new-password"
           onChange={(e) => {
             setCompany(e.target.value);
             if (errors.company) {

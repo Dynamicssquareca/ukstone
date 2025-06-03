@@ -174,11 +174,11 @@ const FormCta = ({ onSubmit }) => {
       delete errors.phone; // Clear the error if the field is not empty and valid
     }
 
-    if (!company.trim()) {
-      errors.company = 'Company name is required';
-    } else {
-      delete errors.company; // Clear the error if the field is not empty
-    }
+    // if (!company.trim()) {
+    //   errors.company = 'Company name is required';
+    // } else {
+    //   delete errors.company; 
+    // }
 
     // if (!message.trim()) {
     //   errors.message = 'Message is required';
@@ -193,7 +193,8 @@ const FormCta = ({ onSubmit }) => {
 
   const isValidEmail = (email) => {
     // Basic email format validation
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!yahoo.co.in)(?!aol.com)(?!live.com)(?!outlook.com)[a-zA-Z0-9_-]+\.[a-zA-Z0-9-.]{2,61}$/;
+    // const emailRegex = /^[a-zA-Z0-9._%+-]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!yahoo.co.in)(?!aol.com)(?!live.com)(?!outlook.com)[a-zA-Z0-9_-]+\.[a-zA-Z0-9-.]{2,61}$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailRegex.test(email);
   };
 
@@ -217,7 +218,7 @@ const FormCta = ({ onSubmit }) => {
   }, [redirectTimer]);
 
   return (
-    <form className="form-one" onSubmit={handleSubmit} autoComplete="off">
+    <form className="form-one" onSubmit={handleSubmit}>
       <div className="form-group">
         <input
           type="text"
@@ -225,7 +226,6 @@ const FormCta = ({ onSubmit }) => {
           name="name"
           placeholder=""
           value={name}
-          autoComplete="new-password"
           onChange={(e) => {
             setName(e.target.value);
             if (errors.name) {
@@ -257,7 +257,6 @@ const FormCta = ({ onSubmit }) => {
           name="email"
           placeholder=""
           value={email}
-          autoComplete="new-password"
           onChange={(e) => {
             setEmail(e.target.value);
             if (errors.email) {
@@ -280,7 +279,6 @@ const FormCta = ({ onSubmit }) => {
         <PhoneInput
           country={defaultCountryCode} // Set default country code
           value={phone}
-          autoComplete="new-password"
           onChange={(value, data) => {
             setPhone(value);
             setDefaultCountryCode(data?.name || ""); // Update the default country code
@@ -312,7 +310,6 @@ const FormCta = ({ onSubmit }) => {
       <div className="form-group">
         <input
           type="text"
-          autoComplete="new-password"
           className="form-control"
           name="companyname"
           placeholder=""
@@ -337,7 +334,6 @@ const FormCta = ({ onSubmit }) => {
         <textarea
           className="form-control"
           name="message"
-          autoComplete="new-password"
           placeholder=""
           rows="3"
           value={message}

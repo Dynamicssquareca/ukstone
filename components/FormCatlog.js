@@ -164,11 +164,11 @@ const FormCatlog = ({ onSubmit }) => {
       delete errors.phone; // Clear the error if the field is not empty and valid
     }
 
-    if (!company.trim()) {
-      errors.company = 'Company name is required';
-    } else {
-      delete errors.company; // Clear the error if the field is not empty
-    }
+    // if (!company.trim()) {
+    //   errors.company = 'Company name is required';
+    // } else {
+    //   delete errors.company; 
+    // }
 
     // if (!message.trim()) {
     //   errors.message = 'Message is required';
@@ -183,7 +183,8 @@ const FormCatlog = ({ onSubmit }) => {
 
   const isValidEmail = (email) => {
     // Basic email format validation
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!yahoo.co.in)(?!aol.com)(?!live.com)(?!outlook.com)[a-zA-Z0-9_-]+\.[a-zA-Z0-9-.]{2,61}$/;
+    // const emailRegex = /^[a-zA-Z0-9._%+-]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!yahoo.co.in)(?!aol.com)(?!live.com)(?!outlook.com)[a-zA-Z0-9_-]+\.[a-zA-Z0-9-.]{2,61}$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailRegex.test(email);
   };
 
