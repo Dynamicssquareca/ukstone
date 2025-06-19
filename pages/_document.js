@@ -9,9 +9,9 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
-        <meta name="robots" content="noindex, nofollow" />
+
         <meta name="google-site-verification" content="5ew9dq7KIWCUeL8wUVSWwyGqJgg0takYOwYrroSLUMg" />
-        {/* <script
+        <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=G-H0L8BSTQ7R`}
         />
@@ -24,7 +24,7 @@ export default function Document() {
               gtag('config', 'G-H0L8BSTQ7R');
               `,
           }}
-        /> */}
+        />
         {/* End Google Analytics tracking code */}
       </Head>
       <body>
