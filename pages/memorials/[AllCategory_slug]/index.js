@@ -74,7 +74,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
             <div className='col-lg-6 align-self-end'>
               <div className='hero-banner-two-head '>
                 <h1><span>{category.title}</span></h1>
-                <p>Trusted Tombstone Supplier for Global B2B Partners</p>
+                <p>{category.shortdescription}</p>
               </div>
             </div>
             <div className='col-lg-6'>
