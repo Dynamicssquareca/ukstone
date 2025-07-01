@@ -68,7 +68,7 @@ const Footer = ({faq}) => {
                                     {/* <a href="#" className="twitter"><i className="bi bi-twitter"></i></a>
                                     <a href="#" className="facebook"><i className="bi bi-facebook"></i></a>
                                     <a href="#" className="instagram"><i className="bi bi-instagram"></i></a> */}
-                                    <a href="#" className="linkedin" target='_blank'><i className="bi bi-linkedin"></i></a>
+                                    <a href="https://www.linkedin.com/showcase/stone-discover-uk/" className="linkedin" target='_blank'><i className="bi bi-linkedin"></i></a>
                                 </div>
                             </div>
                             <div className="col-lg-2 col-6 footer-links">
@@ -95,7 +95,7 @@ const Footer = ({faq}) => {
 
                             </div>
                             <div className="col-lg-4 col-md-12 footer-contact text-center text-md-start">
-                                <h4>Usefull info</h4>
+                                <h4>Useful info</h4>
                                 {/* <p><b>Office:</b> 1116, JMD Megapolis, Sector 48, Gurugram, Haryana 122018.</p> */}
                                 <p><b>Working Time:</b> Mon-Sat: 8 AM - 5 PM</p>
                                 <p><b>Email:</b> info@stonediscover.com</p>

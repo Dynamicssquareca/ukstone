@@ -394,8 +394,8 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
               <div className='card-04'>
                 <div className='card-04-item text-center'>
                   <a href="/contact-us/">
-                    <Image src='/img/webpages/pic-15.jpg' alt='Flower Vases' width={210} height={210} className='img-fluid' />
-                    <h4>Flower Vases</h4>
+                    <Image src='/img/webpages/pic-15.jpg' alt='Indian Aurora' width={210} height={210} className='img-fluid' />
+                    <h4>Indian Aurora</h4>
                   </a>
                 </div>
               </div>

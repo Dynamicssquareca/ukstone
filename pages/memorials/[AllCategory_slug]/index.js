@@ -312,7 +312,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
                 <div className='card-04-item text-center'>
                   <a href="/">
                     <img src='/img/webpages/pic-11.jpg' alt='About Us' className='img-fluid' />
-                    <h4>Angle Heqadstones</h4>
+                    <h4>Angle Headstones</h4>
                   </a>
                 </div>
               </div>
