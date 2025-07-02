@@ -75,8 +75,8 @@ const Index = ({ categories }) => {
                     <div className='row'>
                         <div className='col-lg-6 align-self-end'>
                             <div className='hero-banner-two-head '>
-                                <h1>Memorials <span> Stone</span></h1>
-                                <p>Trusted Tombstone Supplier for Global B2B Partners</p>
+                                <h1>Memorial <span> Stones</span></h1>
+                                <p>The UK’s Trusted Partner for Quality Memorial Stones</p>
                             </div>
                         </div>
                         <div className='col-lg-6'>
@@ -87,7 +87,7 @@ const Index = ({ categories }) => {
                     </div>
                 </div>
             </div>
-         
+
             <section className='p-b-80 p-t-40 m-p-06'>
                 <div className='container'>
                     <div className='row'>
@@ -123,7 +123,7 @@ const Index = ({ categories }) => {
                     </div>
                 </div>
             </section>
-               <section className='about-us-section p-t-40 p-b-40 m-p-05'>
+            <section className='about-us-section p-t-40 p-b-40 m-p-05'>
                 <div className='container'>
                     <div className='row'>
 

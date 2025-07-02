@@ -92,7 +92,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
         </div>
       </div>
 
-    
+
 
 
 
@@ -134,7 +134,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
         </div>
       </div>
 
-        <section className='about-us-section p-t-80 p-b-40 p-t-40'>
+      <section className='about-us-section p-t-80 p-b-40 p-t-40'>
         <div className='container'>
           <div className='row'>
 
