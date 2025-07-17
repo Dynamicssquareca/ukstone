@@ -64,7 +64,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
           content={
             category.featuredimage
               ? CanImageUrl(category.featuredimage)
-              : `${process.env.NEXT_PUBLIC_SITE_URL}img/stone-og-inne.jpg`
+              : `${process.env.NEXT_PUBLIC_SITE_URL}img/stone-og-inne.jpeg`
           }
         />
       </Head>

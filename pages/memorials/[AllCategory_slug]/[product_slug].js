@@ -60,7 +60,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
           content={
             product.featuredimage
               ? CanImageUrl(product.featuredimage)
-              : `${process.env.NEXT_PUBLIC_SITE_URL}img/stone-og-inne.jpg`
+              : `${process.env.NEXT_PUBLIC_SITE_URL}img/stone-og-inne.jpeg`
           }
         />
       </Head>
