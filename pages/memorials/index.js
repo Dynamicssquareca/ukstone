@@ -214,7 +214,7 @@ const Index = ({ categories }) => {
                                                     <li>Kerbsets</li>
                                                     <li>Vases and Urns</li>
                                                     <li>Angel Memorials</li>
-                                                    <li>hildren Memorials</li>
+                                                    <li>Children Memorials</li>
                                                     <li>All with engraving-ready finishes</li>
                                                 </ul>
                                             </AccordionBody>
@@ -248,82 +248,9 @@ const Index = ({ categories }) => {
             </section>
 
 
-            <section className='p-b-100 p-t-80 m-p-07'>
-                <div className='container'>
-                    <div className='row justify-content-center'>
-                        <div className='col-lg-9'>
-                            <div className='heading-center p-b-40'>
-                                <h2 className='m-b-30'>Memorial Collection <span>Crafted</span> for All</h2>
-                                <p>We offer a wide range of expertly crafted memorial designs to suit every need and occasion. From classic headstones and kerbsets to elegant bench and heart memorials, our collection also includes vases, urns, angel tributes, and dedicated children’s memorials. Each piece is made with care, precision, and a deep respect for the memories it honors. Contact us directly for competitive quotes and tailored solutions.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='row g-2 sliding-row'>
-                        <div className='col-lg-2 col-md-4 sliding-col'>
-                            <div className='card-04'>
-                                <div className='card-04-item text-center'>
-                                    <a href="/contact-us/">
-                                        <img src='/img/webpages/pic-07.jpg' alt='About Us' className='img-fluid' />
-                                        <h4>Bench</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-lg-2 col-md-4 sliding-col'>
-                            <div className='card-04'>
-                                <div className='card-04-item text-center'>
-                                    <a href="/contact-us/">
-                                        <img src='/img/webpages/pic-08.jpg' alt='About Us' className='img-fluid' />
-                                        <h4>Kerbsets</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-lg-2 col-md-4 sliding-col'>
-                            <div className='card-04'>
-                                <div className='card-04-item text-center'>
-                                    <a href="/contact-us/">
-                                        <img src='/img/webpages/pic-09.jpg' alt='About Us' className='img-fluid' />
-                                        <h4>Flower Vases</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-lg-2 col-md-4 sliding-col'>
-                            <div className='card-04'>
-                                <div className='card-04-item text-center'>
-                                    <a href="/contact-us/">
-                                        <img src='/img/webpages/pic-10.jpg' alt='About Us' className='img-fluid' />
-                                        <h4>Urns</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-lg-2 col-md-4 sliding-col'>
-                            <div className='card-04'>
-                                <div className='card-04-item text-center'>
-                                    <a href="/">
-                                        <img src='/img/webpages/pic-11.jpg' alt='About Us' className='img-fluid' />
-                                        <h4>Angle Headstones</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-lg-2  col-md-4 sliding-col'>
-                            <div className='card-04'>
-                                <div className='card-04-item text-center'>
-                                    <a href="/contact-us/">
-                                        <img src='/img/webpages/pic-12.jpg' alt='About Us' className='img-fluid' />
-                                        <h4>Children Memorial</h4>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+           
 
-            <section className='p-t-20'>
+            <section className='p-t-60'>
                 <div className='container'>
                     <div className='row justify-content-center'>
                         <div className='col-lg-9'>

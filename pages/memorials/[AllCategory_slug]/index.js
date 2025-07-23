@@ -223,7 +223,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
                           <li>Kerbsets</li>
                           <li>Vases and Urns</li>
                           <li>Angel Memorials</li>
-                          <li>hildren Memorials</li>
+                          <li>Children Memorials</li>
                           <li>All with engraving-ready finishes</li>
                         </ul>
                       </AccordionBody>
@@ -271,7 +271,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
             <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/contact-us/">
+                  <a href="/memorials/benches/">
                     <img src='/img/webpages/pic-07.jpg' alt='About Us' className='img-fluid' />
                     <h4>Bench</h4>
                   </a>
@@ -281,7 +281,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
             <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/contact-us/">
+                  <a href="/memorials/kerb-sets/">
                     <img src='/img/webpages/pic-08.jpg' alt='About Us' className='img-fluid' />
                     <h4>Kerbsets</h4>
                   </a>
@@ -291,7 +291,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
             <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/contact-us/">
+                  <a href="/memorials/vases/">
                     <img src='/img/webpages/pic-09.jpg' alt='About Us' className='img-fluid' />
                     <h4>Flower Vases</h4>
                   </a>
@@ -301,7 +301,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
             <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/contact-us/">
+                  <a href="/memorials/urns/">
                     <img src='/img/webpages/pic-10.jpg' alt='About Us' className='img-fluid' />
                     <h4>Urns</h4>
                   </a>
@@ -311,7 +311,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
             <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/contact-us/">
+                  <a href="/memorials/angel-headstone/">
                     <img src='/img/webpages/pic-11.jpg' alt='About Us' className='img-fluid' />
                     <h4>Angle Headstones</h4>
                   </a>
@@ -321,7 +321,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
             <div className='col-lg-2  col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/contact-us/">
+                  <a href="/memorials/childrens-headstones/">
                     <img src='/img/webpages/pic-12.jpg' alt='About Us' className='img-fluid' />
                     <h4>Children Memorial</h4>
                   </a>

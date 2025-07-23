@@ -10,28 +10,28 @@ export default function Home() {
   return (
     <>
       <Head>
-                <title>Wholesale Memorial Headstones in the UK | Stone Discover UK</title>
-                <meta
-                    name="description"
-                    content="Buy high-quality memorial headstones at wholesale prices in the UK. Ideal for funeral homes, stone retailers, and fabricators. Contact Stone Discover UK today."
-                />
-                <link rel="canonical" href="https://www.stonediscover.co.uk/" />
-                <meta property="og:locale" content="US" />
-                <meta property="og:type" content="website" />
-                <meta property="og:title" content="Wholesale Memorial Headstones in the UK | Stone Discover UK" />
-                <meta property="og:description" content="Buy high-quality memorial headstones at wholesale prices in the UK. Ideal for funeral homes, stone retailers, and fabricators. Contact Stone Discover UK today." />
-                <meta property="og:url" content="https://www.stonediscover.co.uk/" />
-                <meta property="og:site_name" content="Stone Discover UK" />
-                <meta property="og:image" content="https://www.stonediscover.co.uk/img/stone-home-o.jpeg" />
-                <meta property="og:image:width" content="200" />
-                <meta property="og:image:height" content="200" />
-                <meta property="og:image:type" content="image/jpeg" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@Stone Discover UK" />
-                <meta name="twitter:title" content="Wholesale Memorial Headstones in the UK | Stone Discover UK" />
-                <meta name="twitter:description" content="Buy high-quality memorial headstones at wholesale prices in the UK. Ideal for funeral homes, stone retailers, and fabricators. Contact Stone Discover UK today." />
-                <meta name="twitter:image" content="https://www.stonediscover.co.uk/img/stone-home-o.jpeg" />
-            </Head>
+        <title>Wholesale Memorial Headstones in the UK | Stone Discover UK</title>
+        <meta
+          name="description"
+          content="Buy high-quality memorial headstones at wholesale prices in the UK. Ideal for funeral homes, stone retailers, and fabricators. Contact Stone Discover UK today."
+        />
+        <link rel="canonical" href="https://www.stonediscover.co.uk/" />
+        <meta property="og:locale" content="US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Wholesale Memorial Headstones in the UK | Stone Discover UK" />
+        <meta property="og:description" content="Buy high-quality memorial headstones at wholesale prices in the UK. Ideal for funeral homes, stone retailers, and fabricators. Contact Stone Discover UK today." />
+        <meta property="og:url" content="https://www.stonediscover.co.uk/" />
+        <meta property="og:site_name" content="Stone Discover UK" />
+        <meta property="og:image" content="https://www.stonediscover.co.uk/img/stone-home-o.jpeg" />
+        <meta property="og:image:width" content="200" />
+        <meta property="og:image:height" content="200" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@Stone Discover UK" />
+        <meta name="twitter:title" content="Wholesale Memorial Headstones in the UK | Stone Discover UK" />
+        <meta name="twitter:description" content="Buy high-quality memorial headstones at wholesale prices in the UK. Ideal for funeral homes, stone retailers, and fabricators. Contact Stone Discover UK today." />
+        <meta name="twitter:image" content="https://www.stonediscover.co.uk/img/stone-home-o.jpeg" />
+      </Head>
 
       <div className="hero-banner-one">
         <Image
@@ -231,8 +231,8 @@ export default function Home() {
             <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/memorials/">
-                    <Image src='/img/webpages/pic-07.jpg' alt='About Us' className='img-fluid' width={210} height={210} />
+                  <a href="/memorials/benches/">
+                    <img src='/img/webpages/pic-07.jpg' alt='About Us' className='img-fluid' />
                     <h4>Bench</h4>
                   </a>
                 </div>
@@ -241,8 +241,8 @@ export default function Home() {
             <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/memorials/">
-                    <Image src='/img/webpages/pic-08.jpg' alt='About Us' className='img-fluid' width={210} height={210} />
+                  <a href="/memorials/kerb-sets/">
+                    <img src='/img/webpages/pic-08.jpg' alt='About Us' className='img-fluid' />
                     <h4>Kerbsets</h4>
                   </a>
                 </div>
@@ -251,8 +251,8 @@ export default function Home() {
             <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/memorials/">
-                    <Image src='/img/webpages/pic-09.jpg' alt='About Us' className='img-fluid' width={210} height={210} />
+                  <a href="/memorials/vases/">
+                    <img src='/img/webpages/pic-09.jpg' alt='About Us' className='img-fluid' />
                     <h4>Flower Vases</h4>
                   </a>
                 </div>
@@ -261,8 +261,8 @@ export default function Home() {
             <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/memorials/">
-                    <Image src='/img/webpages/pic-10.jpg' alt='About Us' className='img-fluid' width={210} height={210} />
+                  <a href="/memorials/urns/">
+                    <img src='/img/webpages/pic-10.jpg' alt='About Us' className='img-fluid' />
                     <h4>Urns</h4>
                   </a>
                 </div>
@@ -271,9 +271,9 @@ export default function Home() {
             <div className='col-lg-2 col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/memorials/">
-                    <Image src='/img/webpages/pic-11.jpg' alt='About Us' className='img-fluid' width={210} height={210} />
-                    <h4>Angle Headstone</h4>
+                  <a href="/memorials/angel-headstone/">
+                    <img src='/img/webpages/pic-11.jpg' alt='About Us' className='img-fluid' />
+                    <h4>Angle Headstones</h4>
                   </a>
                 </div>
               </div>
@@ -281,8 +281,8 @@ export default function Home() {
             <div className='col-lg-2  col-md-4 sliding-col'>
               <div className='card-04'>
                 <div className='card-04-item text-center'>
-                  <a href="/memorials/">
-                    <Image src='/img/webpages/pic-12.jpg' alt='About Us' className='img-fluid' width={210} height={210} />
+                  <a href="/memorials/childrens-headstones/">
+                    <img src='/img/webpages/pic-12.jpg' alt='About Us' className='img-fluid' />
                     <h4>Children Memorial</h4>
                   </a>
                 </div>

@@ -328,7 +328,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
                           <li>Kerbsets</li>
                           <li>Vases and Urns</li>
                           <li>Angel Memorials</li>
-                          <li>hildren Memorials</li>
+                          <li>Children Memorials</li>
                           <li>All with engraving-ready finishes</li>
                         </ul>
                       </AccordionBody>
