@@ -127,7 +127,7 @@ const Nav = () => {
            <li><a  style={{color:'#d95404',fontWeight:'bold'}} className="nav-link scrollto" href="/catalog-download/">Catalog</a></li>
           <li><a   className="nav-link scrollto" href="/contact-us/">Contact Us</a></li>
           <li><a className='btn btn-one' href='/get-quote-now/'>Get a Quote</a></li>
-          <li><a className='btn btn-two' href=''><span><i className="bi bi-whatsapp"></i></span></a></li>
+          <li><a className='btn btn-two' href='https://wa.me/9667584700'><span><i className="bi bi-whatsapp"></i></span></a></li>
 
 
           {/* <li className="dropdown"><a href="#"><span>Drop Down</span> <i className="bi bi-chevron-down"></i></a>
