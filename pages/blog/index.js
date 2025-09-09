@@ -69,9 +69,9 @@ const BlogIndex = ({ posts, categories }) => {
       {/* Blog Hero Section */}
       <div className="blog-hero">
         <div className="container">
-          <div className="row align-items-center">
+          <div className="row justify-content-center">
             {/* Left: Latest Post */}
-            <div className="col-xl-6">
+            <div className="col-xl-8">
               <div className="blog-lates-card-one">
                 <span>Latest</span>
                 {latestPost && (
@@ -106,21 +106,22 @@ const BlogIndex = ({ posts, categories }) => {
                 )}
 
               </div>
-            </div>
-            <div className="col-xl-6 text-center">
-              <Image src={
+              <div className='new-imag'>
+                <a href={`/blog/${latestPost.slug}`}> <Image src={
                 latestPost.metaimage
                   ? getImageUrl(latestPost.metaimage)
                   : `${process.env.NEXT_PUBLIC_SITE_URL}img/sdie-pop.png`
-              } alt="side pop" className="img-fluid" width={400} height={400} priority />
-
+              } alt="side pop" className="img-fluid" width={800} height={418} priority /></a>
+               
+              </div>
             </div>
+          
           </div>
         </div>
       </div>
 
       {/* Browse by Category Section */}
-      <section className="py-5 over-hidd">
+      {/* <section className="py-5 over-hidd">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -144,7 +145,7 @@ const BlogIndex = ({ posts, categories }) => {
                 modules={[Pagination]}
                 className="mySwiper mySwiperNew"
               >
-                {/* Default "All" Category */}
+    
                 <SwiperSlide key="all">
                   <div
                     className={`blog-category-card-one  ${selectedCategory === "all" ? "active" : ""}`}
@@ -173,15 +174,15 @@ const BlogIndex = ({ posts, categories }) => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Most Recent Section */}
-      <section className="py-4">
+      <section className="py-4 p-t-60">
         <div className="container">
           <div className="row mb-1">
             <div className="col-12">
               <div className="blog-section-title">
-                <h2>Most Recent</h2>
+                <h2>All Blogs</h2>
               </div>
             </div>
           </div>
@@ -284,10 +285,10 @@ export async function getStaticProps() {
     if (categoryRes.ok) {
       categories = await categoryRes.json();
     }
-    return { props: { posts, categories }, revalidate: 10 };
+    return { props: { posts, categories }, revalidate: 60 };
   } catch (err) {
     console.error('Error fetching data:', err);
-    return { props: { posts: [], categories: [] }, revalidate: 10 };
+    return { props: { posts: [], categories: [] }, revalidate: 60 };
   }
 }
 

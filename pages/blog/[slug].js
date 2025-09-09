@@ -94,7 +94,7 @@ const BlogPost = ({ post, relatedPosts, relatedHeading, categories, error }) => 
               : `${process.env.NEXT_PUBLIC_SITE_URL}img/banner/home-main-banner.png`
           }
         />
-             <meta name="robots" content="noindex, nofollow" />
+ <meta name="robots" content="noindex, nofollow" />
       </Head>
 
 
@@ -341,10 +341,10 @@ export async function getStaticProps({ params }) {
       categories = await catRes.json();
     }
 
-    return { props: { post, relatedPosts, relatedHeading, categories }, revalidate: 10 };
+    return { props: { post, relatedPosts, relatedHeading, categories }, revalidate: 60 };
   } catch (err) {
     console.error(err);
-    return { props: { post: null, error: true, relatedPosts: [], categories: [] }, revalidate: 10 };
+    return { props: { post: null, error: true, relatedPosts: [], categories: [] }, revalidate: 60 };
   }
 }
 
