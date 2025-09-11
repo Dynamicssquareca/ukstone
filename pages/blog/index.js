@@ -57,10 +57,10 @@ const BlogIndex = ({ posts, categories }) => {
   return (
     <>
       <Head>
-        <title>Top Salesforce CRM Blogs | CRM Frontier  - CRM Resource</title>
+        <title>Wholesale Memorial Headstones Guides | Stone Discover UK</title>
         <meta
           name="description"
-          content="Explore the best Salesforce CRM blogs on CRM Frontier  for expert tips, insights, and strategies to optimize your CRM experience."
+          content="Explore wholesale memorial headstone guides with Stone Discover UK. Resources for funeral trade, stonemasons & retailers to choose the best."
         />
         <link rel="canonical" href={canonicalUrl} />
       </Head>
