@@ -210,7 +210,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
                     <AccordionItem>
                       <AccordionHeader targetId="3">
                         <div className="d-flex justify-content-between align-items-center w-100">
-                          <h3><img src='/img/icons/faq-icon-04.png' alt='faq-icon' />Bespoke Designs</h3>
+                          <h3><img src='/img/icons/faq-icon-03.png' alt='faq-icon' />Bespoke Designs</h3>
                           {/* <span className={`icon ${open === '1' ? 'open' : 'closed'}`}>
                                                                                      {open === '1' ? '-' : '+'}
                                                                                  </span> */}
@@ -231,7 +231,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
                     <AccordionItem>
                       <AccordionHeader targetId="4">
                         <div className="d-flex justify-content-between align-items-center w-100">
-                          <h3><img src='/img/icons/faq-icon-03.png' alt='faq-icon' />Seamless Logistics & Delivery</h3>
+                          <h3><img src='/img/icons/faq-icon-04.png' alt='faq-icon' />Seamless Logistics & Delivery</h3>
                           {/* <span className={`icon ${open === '1' ? 'open' : 'closed'}`}>
                                                                                      {open === '1' ? '-' : '+'}
                                                                                  </span> */}
