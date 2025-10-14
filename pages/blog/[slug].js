@@ -97,6 +97,14 @@ const BlogPost = ({ post, relatedPosts, relatedHeading, categories, error }) => 
               : `${process.env.NEXT_PUBLIC_SITE_URL}img/banner/home-main-banner.png`
           }
         />
+        {post.schema &&
+          post.schema.map((scriptContent, index) => (
+            <script
+              key={index}
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: scriptContent }}
+            />
+          ))}
       </Head>
 
 
