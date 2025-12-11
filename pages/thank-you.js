@@ -5,8 +5,7 @@ const ThankYou = () => {
     <>
       <Head>
         <title>Thank You | CRM Frontier</title>
-        <meta
-          name="description"
+        <meta name="description"
           content="Thanks for getting in touch - someone will contact you soon!"
         />
         <link rel="canonical" href="https://www.crmfrontier.com/thank-you/" />
