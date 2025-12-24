@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ModelBox from '@/components/ModelBox';
 import {
   Accordion,
   AccordionBody,
@@ -65,12 +66,11 @@ const FaqAccordion = ({ faqList = [] }) => {
           ))}
         </Accordion>
       </div>
-      {/* <div className="text-right-row">
-        <a href="/" className="btn btn-four m-t-30">
-          Read More
-        </a>
-      </div> */}
+      <div className="text-center" style={{paddingTop:'30px'}}>
+        <ModelBox className="btn-three" headerText="Scale Your Store!" buttonText="More Enquiry" />
+      </div>
     </div>
+     
   );
 };
 
