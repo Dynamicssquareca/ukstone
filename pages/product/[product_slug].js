@@ -1,16 +1,16 @@
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 import Head from 'next/head';
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/navigation';
+// import 'swiper/css';
+// import 'swiper/css/free-mode';
+// import 'swiper/css/navigation';
 import Image from 'next/image';
-import 'swiper/css/thumbs';
-import ImageMagnifier from '@/components/ImageMagnifier';
+// import 'swiper/css/thumbs';
+// import ImageMagnifier from '@/components/ImageMagnifier';
 import { Accordion, AccordionBody, AccordionHeader, AccordionItem, } from 'reactstrap';
 // import required modules
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+// import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import ModelBox from '@/components/ModelBox';
 
 const getImageUrl = (img) =>
@@ -39,7 +39,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
       setOpenone(id);
     }
   };
-  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}memorials/${product.category.slug}/${product.slug}/`;
+  const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL}product/${product.slug}/`;
   const CanImageUrl = (img) => {
     if (!img) return '';
     if (img.startsWith('http')) return img;
@@ -94,11 +94,14 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
 
 
             <div className='col-lg-5'>
-              <div className='product-pic' ref={sliderRef}>
+              {/* <div className='product-pic' ref={sliderRef}>
                 <ImageMagnifier src={getImageUrl(product.images?.[0])} alt={product.title}
                   zoomScale={2} sliderRef={sliderRef} />
-
-
+              </div> */}
+              <div className='product-pic' style={{position:'sticky',top:'100px'}}>
+                 <Image src={getImageUrl(product.images?.[0])} alt={product.title}
+                 width={600} height={600} priority
+                  />
               </div>
             </div>
             <div className='col-lg-7'>
@@ -202,7 +205,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
 
                   <div className='card-04'>
                     <div className='card-04-item text-center'>
-                      <a href={`/memorials/${product.category.slug}/${rel.slug}`}>
+                      <a href={`/product/${rel.slug}`}>
                         <Image
                           src={getImageUrl(rel.images?.[0])}
                           alt={rel.title}

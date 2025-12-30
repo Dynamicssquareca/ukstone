@@ -112,7 +112,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
               <div className="col-lg-3 sliding-col-05" key={product._id}>
                 <div className="card-06">
                   <div className="card-06-item">
-                    <a href={`/memorials/${category.slug}/${product.slug}`}>
+                    <a href={`/product/${product.slug}`}>
                       <Image
                         width={300}
                         height={200}
