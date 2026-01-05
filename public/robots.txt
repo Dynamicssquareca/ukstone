@@ -2,7 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /blog/tag/
 Disallow: /blog/category/
-Disallow: /blog/category/*
 Disallow: /thank-you/
 
 
