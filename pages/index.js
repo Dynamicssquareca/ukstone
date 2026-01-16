@@ -190,10 +190,11 @@ export default function Home() {
           <div className='row'>
             <div className='col-lg-6 align-items-center'>
               <div className='left-card-01-img'>
-                <Image src='/img/webpages/pic-06.png' alt='About Us' className='img-fluid' width={553} height={545} />
+                <Image src='/img/webpages/pic-06.png' alt='memorial headstones' className='img-fluid' width={553} height={545} />
               </div>
             </div>
             <div className='col-lg-6 d-flex'>
+              
               <div className='card-03'>
                 <ul>
                   <li className='m-b-20'>

@@ -59,7 +59,7 @@ export default function About() {
                     <div className='row'>
                         <div className='col-lg-6'>
                             <div className='about-us-image'>
-                                <Image src='/img/webpages/about-us-pic.png' alt='About Us' className='img-fluid' width={553} height={545} />
+                                <Image src='/img/webpages/memorial-headstones-in-warehouse.png' alt='memorial-headstones-in-warehouse' className='img-fluid' width={553} height={545} />
                             </div>
                         </div>
                         <div className='col-lg-6'>
