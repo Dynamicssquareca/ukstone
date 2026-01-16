@@ -115,7 +115,7 @@ export default function Home() {
               <div className='card-01'>
                 <Image src='/img/icons/add-location-alt.png' alt='Our Location' className='img-fluid' width={48} height={49} />
                 <h3>UK Presence</h3>
-                <p>We are based in Liverpool and Southampton, where we maintain a large inventory of catalog items for immediate delivery. As the largest stockist of headstones in the UK. Our manufacturing facility is located in Alinagar, Chetlapotham, Telangana, Southern India.</p>
+                <p>We are based in Liverpool and Southampton, where we maintain a large inventory of catalog items for immediate delivery. As the largest stockist of headstones in the UK.</p>
               </div>
             </div>
             <div className='col-lg-4 d-flex'>
