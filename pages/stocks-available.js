@@ -3,6 +3,7 @@ import ProductCard from "@/components/ProductCard";
 import BookingForm from "@/components/BookingForm";
 import Head from 'next/head';
 import Image from "next/image";
+import ModelBox from '@/components/ModelBox';
 
 import React from 'react';
 
@@ -50,6 +51,13 @@ const Test = () => {
               onBook={handleBook}   // ✅ IMPORTANT
             />
           ))}
+           <div className="col-lg-4 mb-4">
+            <div className="my-new-card">
+              <h3>Let’s Build the Right Package for You</h3>
+              <p>Have specific volume needs or custom requirements? Reach out to us for personalised pricing and flexible package options.</p>
+              <ModelBox className="btn-three-black" headerText="Scale Your Store!" buttonText="Get a Custom Quote" />
+            </div>
+            </div>
         </div>
       </div>
        <section className='p-b-30'>
