@@ -4,11 +4,11 @@ const ThankYou = () => {
   return (
     <>
       <Head>
-        <title>Thank You | CRM Frontier</title>
+        <title>Thank You</title>
         <meta name="description"
           content="Thanks for getting in touch - someone will contact you soon!"
         />
-        <link rel="canonical" href="https://www.crmfrontier.com/thank-you/" />
+        <link rel="canonical" href="https://www.stonediscover.co.uk/thank-you/" />
       </Head>
 
       <section className="hero">

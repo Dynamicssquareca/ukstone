@@ -1698,6 +1698,10 @@ gap:2px
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+.mm-coo{
+  background-color:#f7f6f3;
+  padding:25px 0px
+}
 
 @media (max-width: 991px) {
     .blog-lates-card-one {
