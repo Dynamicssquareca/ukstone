@@ -16,6 +16,7 @@ const BookingForm = ({ onSubmit, productData = null }) => {
   const [defaultCountryCode, setDefaultCountryCode] = useState("us");
   const [pageUrl, setPageUrl] = useState("");
 
+  /* ===================== INIT ===================== */
   useEffect(() => {
     setPageUrl(window.location.href);
     fetchCountryCodeByIP();
@@ -27,11 +28,47 @@ const BookingForm = ({ onSubmit, productData = null }) => {
     )
       .then((res) => res.json())
       .then((data) => {
-        setDefaultCountryCode(data.country_code.toLowerCase());
+        setDefaultCountryCode(data.country_code?.toLowerCase() || "us");
       })
       .catch(() => setDefaultCountryCode("us"));
   };
 
+  /* ===================== VALIDATION ===================== */
+  const isValidEmail = (email) => {
+    const emailRegex =
+      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+  };
+
+  const isValidPhoneNumber = (phone) => {
+    const cleaned = phone.replace(/\D/g, "");
+    return /^\d{10,15}$/.test(cleaned);
+  };
+
+  const validateForm = () => {
+    const errs = {};
+
+    if (!name.trim()) {
+      errs.name = "Name is required";
+    }
+
+    if (!email.trim()) {
+      errs.email = "Email is required";
+    } else if (!isValidEmail(email)) {
+      errs.email = "Invalid email format";
+    }
+
+    if (!phone.trim()) {
+      errs.phone = "Phone number is required";
+    } else if (!isValidPhoneNumber(phone)) {
+      errs.phone = "Invalid phone number";
+    }
+
+    setErrors(errs);
+    return Object.keys(errs).length === 0;
+  };
+
+  /* ===================== SUBMIT ===================== */
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -43,7 +80,7 @@ const BookingForm = ({ onSubmit, productData = null }) => {
 
     setSubmitted(true);
 
-    // ✅ EMAILJS
+    /* EMAILJS */
     emailjs.send(
       "service_w9qxeft",
       "template_6ni1e9f",
@@ -55,7 +92,6 @@ const BookingForm = ({ onSubmit, productData = null }) => {
         message: message,
         page_url: pageUrl,
 
-        // PRODUCT DATA
         product_title: productData?.title || "",
         product_option: productData?.option || "",
         product_price: productData?.price || "",
@@ -65,7 +101,7 @@ const BookingForm = ({ onSubmit, productData = null }) => {
       "3b5rTXsmRl05L_8tD"
     );
 
-    // ✅ API SEND
+    /* API SEND */
     await fetch("https://www.minimallyyours.com/api/zohostonediscoverusa", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -83,7 +119,7 @@ const BookingForm = ({ onSubmit, productData = null }) => {
       })
     });
 
-    // Reset form
+    // Reset
     setName("");
     setEmail("");
     setPhone("");
@@ -102,19 +138,11 @@ const BookingForm = ({ onSubmit, productData = null }) => {
     );
   };
 
-  const validateForm = () => {
-    const errs = {};
-    if (!name.trim()) errs.name = "Name is required";
-    if (!email.trim()) errs.email = "Email is required";
-    if (!phone.trim()) errs.phone = "Phone is required";
-    setErrors(errs);
-    return Object.keys(errs).length === 0;
-  };
-
+  /* ===================== UI ===================== */
   return (
     <form className="form-one" onSubmit={handleSubmit}>
 
-      {/* ✅ PRODUCT SUMMARY */}
+      {/* PRODUCT SUMMARY */}
       {productData && (
         <div className="alert alert-light border rounded-3 mb-4">
           <p className="mb-1"><b>Product:</b> {productData.title}</p>
@@ -130,14 +158,38 @@ const BookingForm = ({ onSubmit, productData = null }) => {
 
       {/* NAME */}
       <div className="form-group">
-        <input className="form-control" value={name} onChange={e=>setName(e.target.value)} />
+        <input
+          className="form-control"
+          value={name}
+          onChange={(e) => {
+            setName(e.target.value);
+            if (errors.name) setErrors({ ...errors, name: "" });
+          }}
+          onBlur={() => {
+            if (!name.trim())
+              setErrors({ ...errors, name: "Name is required" });
+          }}
+        />
         <label>Full Name</label>
         {errors.name && <div className="text-danger">{errors.name}</div>}
       </div>
 
       {/* EMAIL */}
       <div className="form-group">
-        <input className="form-control" value={email} onChange={e=>setEmail(e.target.value)} />
+        <input
+          className="form-control"
+          value={email}
+          onChange={(e) => {
+            setEmail(e.target.value);
+            if (errors.email) setErrors({ ...errors, email: "" });
+          }}
+          onBlur={() => {
+            if (!email.trim())
+              setErrors({ ...errors, email: "Email is required" });
+            else if (!isValidEmail(email))
+              setErrors({ ...errors, email: "Invalid email format" });
+          }}
+        />
         <label>Company Email</label>
         {errors.email && <div className="text-danger">{errors.email}</div>}
       </div>
@@ -147,7 +199,10 @@ const BookingForm = ({ onSubmit, productData = null }) => {
         <PhoneInput
           country={defaultCountryCode}
           value={phone}
-          onChange={setPhone}
+          onChange={(value) => {
+            setPhone(value);
+            if (errors.phone) setErrors({ ...errors, phone: "" });
+          }}
           inputClass="form-control"
         />
         {errors.phone && <div className="text-danger">{errors.phone}</div>}
@@ -155,17 +210,26 @@ const BookingForm = ({ onSubmit, productData = null }) => {
 
       {/* COMPANY */}
       <div className="form-group">
-        <input className="form-control" value={company} onChange={e=>setCompany(e.target.value)} />
+        <input
+          className="form-control"
+          value={company}
+          onChange={(e) => setCompany(e.target.value)}
+        />
         <label>Company Name</label>
       </div>
 
       {/* MESSAGE */}
       <div className="form-group mb-4">
-        <textarea className="form-control" rows="3" value={message} onChange={e=>setMessage(e.target.value)} />
+        <textarea
+          className="form-control"
+          rows="3"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        />
         <label>Message</label>
       </div>
 
-      <button className="btn btn-three" type="submit" disabled={submitted}>
+      <button className="btn btn-three w-100" type="submit" disabled={submitted}>
         {submitted ? `Submitting (${redirectTimer})` : "Submit"}
       </button>
     </form>
