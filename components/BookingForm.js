@@ -165,7 +165,7 @@ const BookingForm = ({ onSubmit, productData = null }) => {
         <label>Message</label>
       </div>
 
-      <button className="btn btn-three w-100" type="submit" disabled={submitted}>
+      <button className="btn btn-three" type="submit" disabled={submitted}>
         {submitted ? `Submitting (${redirectTimer})` : "Submit"}
       </button>
     </form>

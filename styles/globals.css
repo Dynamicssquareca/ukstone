@@ -1702,7 +1702,17 @@ gap:2px
   background-color:#f7f6f3;
   padding:25px 0px
 }
-
+.m-cutome-widt{
+  max-width: 550px;
+}
+.m-cutome-widt .alert-light{
+margin-top: -20px;
+    margin-bottom: 40px !important;
+}
+.m-cutome-widt p{
+  font-size: 14px;
+}
+.m-cutome-widt .form-one{padding:20px}
 @media (max-width: 991px) {
     .blog-lates-card-one {
         padding-bottom:40px
@@ -1711,6 +1721,10 @@ gap:2px
     .blog-hero {
         padding: 40px 0
     }
+     .form-ff{
+            display: grid;
+  grid-template-columns: 4fr 3fr !important;
+            }
 }
 
 @media (max-width: 768px) {
@@ -1730,6 +1744,9 @@ gap:2px
     .post-content-main h4 {
         font-size: 18px
     }
+    .form-ff{
+           grid-template-columns: 1fr !important;
+}
 }
 
 

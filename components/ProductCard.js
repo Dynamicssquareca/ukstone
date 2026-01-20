@@ -85,7 +85,7 @@ export default function ProductCard({ product, onBook }) {
           }
             .form-ff{
             display: grid;
-  grid-template-columns: 4fr 3fr;
+  grid-template-columns: 5fr 2fr;
   gap: 20px;
             }
   .fw-bold-bg{

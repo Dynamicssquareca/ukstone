@@ -103,7 +103,7 @@ const Test = () => {
           className="modal fade show d-block"
           style={{ background: "rgba(0,0,0,0.6)" }}
         >
-          <div className="modal-dialog modal-lg modal-dialog-centered">
+          <div className="modal-dialog modal-lg modal-dialog-centered m-cutome-widt">
             <div className="modal-content rounded-4">
               <div className="modal-header">
                 <h5 className="modal-title">Book Product</h5>
