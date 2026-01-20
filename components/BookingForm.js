@@ -66,7 +66,7 @@ const BookingForm = ({ onSubmit, productData = null }) => {
     );
 
     // ✅ API SEND
-    await fetch("https://www.minimallyyours.com/api/zohocrmforceplus", {
+    await fetch("https://www.minimallyyours.com/api/zohostonediscoverusa", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
