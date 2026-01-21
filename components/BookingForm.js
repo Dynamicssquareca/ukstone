@@ -163,6 +163,7 @@ const BookingForm = ({ onSubmit, productData = null }) => {
             <div className="form-group">
                 <input
                     className="form-control"
+                     placeholder=""
                     value={name}
                     onChange={(e) => {
                         setName(e.target.value);
@@ -182,6 +183,7 @@ const BookingForm = ({ onSubmit, productData = null }) => {
                 <input
                     className="form-control"
                     value={email}
+                    placeholder=""
                     onChange={(e) => {
                         setEmail(e.target.value);
                         if (errors.email) setErrors({ ...errors, email: "" });
@@ -216,6 +218,7 @@ const BookingForm = ({ onSubmit, productData = null }) => {
                 <input
                     className="form-control"
                     value={company}
+                    placeholder=""
                     onChange={(e) => setCompany(e.target.value)}
                 />
                 <label>Company Name</label>
@@ -224,6 +227,7 @@ const BookingForm = ({ onSubmit, productData = null }) => {
             {/* MESSAGE */}
             <div className="form-group mb-4">
                 <textarea
+                placeholder=""
                     className="form-control"
                     rows="3"
                     value={message}

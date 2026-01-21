@@ -725,6 +725,7 @@ ul li {
 }
 .form-one textarea.form-control {
   height: auto;
+  padding-top: 10px !important;
 }
 .form-one .form-control:focus {
   border-color: #d95404;
