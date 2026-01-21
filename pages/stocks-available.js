@@ -31,7 +31,7 @@ const Test = () => {
           content=""
         />
         <link rel="canonical" href="https://www.stonediscover.co.uk/stocks-available/" />
-        <meta name="robots" content="noidex, nofollow" />
+        <meta name="robots" content="noindex, nofollow" />
       </Head>
 
 
