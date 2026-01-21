@@ -8,7 +8,8 @@
     "options": [
       {
         "label": "Set of 10 @210/set",
-        "price": 2100
+        "price": 2100,
+        "discount": "Get 4.5% discount"
       }
     ],
     "yard": "Liverpool"
@@ -22,7 +23,8 @@
     "options": [
       {
         "label": "Set of 9 @210/set",
-        "price": 1890
+        "price": 1890,
+         "discount": "Get 4.5% discount"
       }
     ],
     "yard": "Liverpool"
