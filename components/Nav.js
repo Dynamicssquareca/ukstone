@@ -124,7 +124,7 @@ const Nav = () => {
               <li><a href="/memorials/headstones/">Headstones</a></li>
               <li><a href="/memorials/kerb-sets/">Kerb Sets</a></li>
               <li><a href="/memorials/benches/">Memorial Benches</a></li>
-              <li><a href="/memorials/children-headstones/">Children Headstones</a></li>
+              <li><a href="/memorials/childrens-headstones/">Children Headstones</a></li>
               <li><a href="/memorials/heart-headstones/">Heart Headstones</a></li>
               <li><a href="/memorials/vases/">Vases</a></li>
               <li><a href="/memorials/urns/">Urns</a></li>
