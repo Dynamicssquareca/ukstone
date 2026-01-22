@@ -60,11 +60,24 @@ const Test = () => {
   return (
     <>
       <Head>
-        <title>Email Demo | Memorial Headstones Supplier in UK</title>
-        <meta name="description"
-          content=""
-        />
+        <title>In-Stock Memorial Headstones in UK | Stone Discover Inventory</title>
+        <meta name="description" content="Browse in-stock memorial headstones available for immediate delivery across the UK. View designs, sizes, and finishes from Stone Discover." />
         <link rel="canonical" href="https://www.stonediscover.co.uk/stocks-available/" />
+        <meta property="og:locale" content="US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="In-Stock Memorial Headstones in UK | Stone Discover Inventory" />
+        <meta property="og:description" content="Browse in-stock memorial headstones available for immediate delivery across the UK. View designs, sizes, and finishes from Stone Discover." />
+        <meta property="og:url" content="https://www.stonediscover.co.uk/stocks-available/" />
+        <meta property="og:site_name" content="Stone Discover UK" />
+        <meta property="og:image" content="https://www.stonediscover.co.uk/img/stone-home-o.jpeg" />
+        <meta property="og:image:width" content="200" />
+        <meta property="og:image:height" content="200" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@Stone Discover UK" />
+        <meta name="twitter:title" content="In-Stock Memorial Headstones in UK | Stone Discover Inventory" />
+        <meta name="twitter:description" content="Browse in-stock memorial headstones available for immediate delivery across the UK. View designs, sizes, and finishes from Stone Discover." />
+        <meta name="twitter:image" content="https://www.stonediscover.co.uk/img/stone-home-o.jpeg" />
         <meta name="robots" content="noindex, nofollow" />
       </Head>
 

@@ -117,6 +117,7 @@ const Nav = () => {
           {/* <li><Link className="nav-link scrollto" href="/solutions/">Solutions</Link></li> */}
           {/* <li><a className="nav-link scrollto" href="/">Industries</a></li> */}
           {/* <li><a className="nav-link scrollto" href="/">Company</a></li> */}
+          <li><a style={{ color: '#a44400', fontWeight: 'bold' }} className="nav-link" href="/stocks-available/">In Stock</a></li>
           <li className="dropdown"><a href="/memorials/"><span>Memorial Stones</span> <i className="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="/memorials/angel-headstone/">Angel Headstone</a></li>
@@ -131,7 +132,7 @@ const Nav = () => {
           </li>
           <li><a className="nav-link scrollto" href="/about-us/">About Us</a></li>
 
-          <li><a style={{ color: '#a44400', fontWeight: 'bold' }} className="nav-link scrollto" href="/catalog-download/">Catalog</a></li>
+          <li><a className="nav-link scrollto" href="/catalog-download/">Catalog</a></li>
           <li><a className="nav-link" href="/blog/">Blogs</a></li>
           <li><a className="nav-link scrollto" href="/contact-us/">Contact Us</a></li>
           <li><a className='btn btn-three btn btn-secondary' href='/get-quote-now/'>Get a Quote</a></li>
