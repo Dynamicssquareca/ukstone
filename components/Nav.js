@@ -200,9 +200,12 @@ const Nav = () => {
                 {/* <DropdownComponent id="servicesDropdown" label="Drop Down" items={servicesItems} />
                 <DropdownComponent id="solutionsDropdown" label="Drop Down" items={solutionsItems} /> */}
                 {/* <DropdownComponent label="Resources" items={resourceItems} /> */}
-                <li><a className="nav-link scrollto" href="/memorials/">Memorial Stones</a></li>
-                <li><a className="nav-link scrollto" href="/about-us/">About US</a></li>
+                 <li><a style={{ color: '#a44400', fontWeight: 'bold' }} className="nav-link" href="/stocks-available/">In Stock</a></li>
+                <li><a className="nav-link" href="/memorials/">Memorial Stones</a></li>
+                <li><a className="nav-link" href="/about-us/">About US</a></li>
                 <li><a className="nav-link" href="/blog/">Blogs</a></li>
+                <li><a className="nav-link" href="/catalog-download/">Catalog</a></li>
+                <li><a className="nav-link" href="/contact-us/">Contact Us</a></li>
                 {/* <Dropdown nav isOpen={dropdownOpen} toggle={toggles}>
                   <DropdownToggle nav caret>
                     Resources
