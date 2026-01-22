@@ -229,8 +229,6 @@ const Nav = () => {
                   </ul>
                   
                 </li> */}
-                <li><a className="nav-link scrollto" href="/contact-us/">Contact Us</a></li>
-
               </ul>
 
             </OffcanvasBody>
