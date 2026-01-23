@@ -11,6 +11,7 @@ const FormCatlog = ({ onSubmit }) => {
   const [company, setCompany] = useState('');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false); // 🔒 prevents multiple clicks
   const [redirectTimer, setRedirectTimer] = useState(3);
   const [timerId, setTimerId] = useState(null);
   const [errors, setErrors] = useState({});
@@ -50,13 +51,20 @@ const FormCatlog = ({ onSubmit }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     //spam boat
+    // 🚫 block double click immediately
+    if (isSubmitting) return;
+    setIsSubmitting(true);
+
+
     const formData = new FormData(e.target);
     if (formData.get('website')) {
       console.warn("Spam bot detected.");
+      setIsSubmitting(false);
       return;
     }
 
     if (!validateForm()) {
+      setIsSubmitting(false);
       return;
     }
 
@@ -360,11 +368,18 @@ const FormCatlog = ({ onSubmit }) => {
         </label>
       </div>
       <div className="m-t-30">
-        <button className='btn btn-three' type="submit" disabled={submitted}>
+        {/* <button className='btn btn-three' type="submit" disabled={submitted}>
           {submitted ? `Submitting (${redirectTimer})` : 'Download Now'}
+        </button> */}
+        <button
+          className="btn btn-three btndiaable"
+          type="submit"
+          disabled={isSubmitting || submitted}
+        >
+          {isSubmitting ? 'Submitting…' : 'Download Now'}
         </button>
       </div>
-      {submitted && <p>Your form has been submitted!</p>}
+      {submitted && <p>Please wait, PDF is being prepared...</p>}
     </form>
   );
 };

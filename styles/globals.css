@@ -1750,6 +1750,11 @@ ul li {
   border: none;
   color: #fff;
 }
+.btndiaable[disabled] {
+  pointer-events: none;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
 @media (max-width: 991px) {
   .blog-lates-card-one {
     padding-bottom: 40px;

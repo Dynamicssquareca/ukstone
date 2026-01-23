@@ -11,6 +11,7 @@ const FormCta = ({ onSubmit }) => {
   const [company, setCompany] = useState('');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [redirectTimer, setRedirectTimer] = useState(3);
   const [timerId, setTimerId] = useState(null);
   const [errors, setErrors] = useState({});
@@ -59,16 +60,23 @@ const FormCta = ({ onSubmit }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-     //spam boat
-     const formData = new FormData(e.target);
-     if (formData.get('website')) {
-       console.warn("Spam bot detected.");
-       return;
-     }
+    // 🚫 STOP multiple clicks instantly
+    if (isSubmitting) return;
+    setIsSubmitting(true);
 
-    if (!validateForm()) {
+    //spam boat
+    const formData = new FormData(e.target);
+    if (formData.get('website')) {
+      console.warn("Spam bot detected.");
+      setIsSubmitting(false);
       return;
     }
+
+    if (!validateForm()) {
+      setIsSubmitting(false);
+      return;
+    }
+
 
     // Send email using EmailJS
     emailjs.send('service_62cljjq', 'template_pq4kco7', {
@@ -369,10 +377,17 @@ const FormCta = ({ onSubmit }) => {
           .
         </label>
       </div>
-      <button className='btn btn-three' type="submit" disabled={submitted}>
+      {/* <button className='btn btn-three' type="submit" disabled={submitted}>
         {submitted ? `Submitting (${redirectTimer})` : 'Submit'}
-      </button>
+      </button> */}
       {/* {submitted && <p>Your form has been submitted!</p>} */}
+      <button
+        className="btn btn-three btndiaable"
+        type="submit"
+        disabled={isSubmitting || submitted}
+      >
+        {isSubmitting ? 'Submitting…' : 'Submit'}
+      </button>
     </form>
   );
 };
