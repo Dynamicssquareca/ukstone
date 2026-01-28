@@ -86,18 +86,25 @@ const BookingForm = ({ onSubmit, productData = null }) => {
             "service_w9qxeft",
             "template_6ni1e9f",
             {
-                from_name: name,
-                from_email: email,
-                phone_number: phone,
-                company_name: company,
-                message: message,
-                page_url: pageUrl,
+                from_name: name || "",
+                from_email: email || "",
+                phone_number: phone || "",
+                company_name: company || "",
+                message: message || "",
+                page_url: pageUrl || "",
 
                 product_title: productData?.title || "",
                 product_option: productData?.option || "",
-                product_price: productData?.price || "",
-                product_discount: productData?.discount || "",
-                product_yard: productData?.yard || ""
+                product_price: productData?.price ?? "NA",
+               product_size: productData?.size || "NA",
+                product_discount:
+                    productData?.discount !== undefined &&
+                        productData?.discount !== null &&
+                        productData?.discount !== ""
+                        ? productData.discount
+                        : "NA",
+
+                product_yard: productData?.yard || "NA",
             },
             "3b5rTXsmRl05L_8tD"
         );
@@ -151,6 +158,7 @@ const BookingForm = ({ onSubmit, productData = null }) => {
                     <p className="mb-1"><b>Product:</b> {productData.title}</p>
                     <p className="mb-1"><b>Option:</b> {productData.option}</p>
                     <p className="mb-1"><b>Price:</b> £{productData.price}</p>
+                     <p className="mb-1"><b>Size:</b> {productData.size}</p>
                     {productData.discount && (
                         <p className="mb-0 text-success">
                             <b>Discount:</b> {productData.discount}
@@ -163,7 +171,7 @@ const BookingForm = ({ onSubmit, productData = null }) => {
             <div className="form-group">
                 <input
                     className="form-control"
-                     placeholder=""
+                    placeholder=""
                     value={name}
                     onChange={(e) => {
                         setName(e.target.value);
@@ -227,7 +235,7 @@ const BookingForm = ({ onSubmit, productData = null }) => {
             {/* MESSAGE */}
             <div className="form-group mb-4">
                 <textarea
-                placeholder=""
+                    placeholder=""
                     className="form-control"
                     rows="3"
                     value={message}

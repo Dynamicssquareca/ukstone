@@ -46,11 +46,17 @@ export default function ProductCard({ product, onBook }) {
                         className="btn btnii"
                         onClick={() =>
                             onBook({
-                                title: product.title,
-                                option: selected.label,
-                                price: selected.price,
-                                discount: selected.discount,
-                                yard: product.yard,
+                                title: product?.title || "",
+                                option: selected?.label || "",
+                                price: selected?.price || "",
+                                size: `H/S: ${product?.hsSize || "NA"} | Base: ${product?.baseSize || "NA"}`,
+                                discount:
+                                    selected?.discount !== undefined &&
+                                        selected?.discount !== null &&
+                                        selected?.discount !== ""
+                                        ? selected.discount
+                                        : "NA",
+                                yard: product?.yard || "NA",
                             })
                         }
                     >
