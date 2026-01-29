@@ -166,7 +166,32 @@
       "source": "/memorials/headstones/offset-peon-granite-headstone/",
       "destination": "/product/offset-peon-granite-headstone/",
       "permanent": true
-    }
+    },
+    {
+    "source": "/memorials/plaques/red-granite-memorial-plaque/",
+    "destination": "/memorials/plaques/",
+    "statusCode": 301
+  },
+  {
+    "source": "/memorials/heart-headstones/brown-granite-heart-headstone",
+    "destination": "/memorials/heart-headstones/",
+    "statusCode": 301
+  },
+  {
+    "source": "/memorials/vases/black-granite-memorial-vases/",
+    "destination": "/memorials/vases/",
+    "statusCode": 301
+  },
+  {
+    "source": "/memorials/vases/black-granite-memorial-vases",
+    "destination": "/memorials/vases/",
+    "statusCode": 301
+  },
+  {
+    "source": "/memorials/vases/memorial-vases/",
+    "destination": "/memorials/vases/",
+    "statusCode": 301
+  }
     ]
   }
   
