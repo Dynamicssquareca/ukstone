@@ -173,7 +173,7 @@
     "statusCode": 301
   },
   {
-    "source": "/memorials/heart-headstones/brown-granite-heart-headstone",
+    "source": "/memorials/heart-headstones/brown-granite-heart-headstone/",
     "destination": "/memorials/heart-headstones/",
     "statusCode": 301
   },
@@ -183,7 +183,7 @@
     "statusCode": 301
   },
   {
-    "source": "/memorials/vases/black-granite-memorial-vases",
+    "source": "/memorials/vases/black-granite-memorial-vases/",
     "destination": "/memorials/vases/",
     "statusCode": 301
   },
