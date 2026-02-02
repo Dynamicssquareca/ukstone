@@ -28,7 +28,7 @@ const nextConfig = {
         protocol: "https",  
         hostname: "stonediscoveruk-apibackend.onrender.com",
         port: "",
-        pathname: "/**",
+        pathname: "/uploads/**"
       },
     ],
     // domains: ['stonediscoveruk-apibackend.onrender.com'],
