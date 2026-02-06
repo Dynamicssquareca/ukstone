@@ -261,7 +261,7 @@ const BlogIndex = ({ posts, categories }) => {
           </div>
           {filteredPosts.length > visiblePostsCount && (
             <div className="text-center">
-              <button className="btn btn-primary" onClick={() => setVisiblePostsCount(visiblePostsCount + 3)}>
+              <button className="btn btn-three" onClick={() => setVisiblePostsCount(visiblePostsCount + 3)}>
                 Load More
               </button>
             </div>
