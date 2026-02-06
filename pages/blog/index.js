@@ -74,13 +74,13 @@ const BlogIndex = ({ posts, categories }) => {
               <div className="blog-lates-card-one">
                 <span>Latest</span>
                 {latestPost && (
-                  <a href={`/blog/${latestPost.slug}`}>
+                  <a href={`/blog/${latestPost.slug}/`}>
                     <h1>{limitTitle(latestPost.title, 80)}</h1>
                   </a>
                 )}
                 {latestPost && (
                   <div className="pic-poster-blog mt-3">
-                    <a href={`/blog/author/${latestPost.author.slug || latestPost.author._id}`}>
+                    <a href={`/blog/author/${latestPost.author.slug || latestPost.author._id}/`}>
                       <Image
                         width={64}
                         height={64}
@@ -95,7 +95,7 @@ const BlogIndex = ({ posts, categories }) => {
 
                     </a>
                     <div className="av-info">
-                      <div className="av-name"><a href={`/blog/author/${latestPost.author.slug || latestPost.author._id}`}>{getAuthorName(latestPost)}</a></div>
+                      <div className="av-name"><a href={`/blog/author/${latestPost.author.slug || latestPost.author._id}/`}>{getAuthorName(latestPost)}</a></div>
                       <div className="av-date">
                         {new Date(latestPost.createdAt).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' }) || 'Date unknown'} <span className='m-22'>|</span> {latestPost.readtimes || 'read time'}min
                       </div>
@@ -106,7 +106,7 @@ const BlogIndex = ({ posts, categories }) => {
 
               </div>
               <div className='new-imag'>
-                <a href={`/blog/${latestPost.slug}`}> <Image src={
+                <a href={`/blog/${latestPost.slug}/`}> <Image src={
                 latestPost.metaimage
                   ? getImageUrl(latestPost.metaimage)
                   : `${process.env.NEXT_PUBLIC_SITE_URL}img/sdie-pop.png`
