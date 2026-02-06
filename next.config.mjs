@@ -4,6 +4,15 @@ const nextConfig = {
   swcMinify: true,
   trailingSlash: true,
   output: "standalone",
+  async redirects() {
+    return [
+      {
+        source: '/blog/:slug',
+        destination: '/blog/:slug/',
+        permanent: true, // 301
+      },
+    ];
+  },
   env: {
     NEXT_PUBLIC_SITE_URL:'https://www.stonediscover.co.uk/',
     NEXT_PUBLIC_MAIN_API_URL:'https://stonediscoveruk-apibackend.onrender.com/api/frontend',
