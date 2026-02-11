@@ -1755,6 +1755,18 @@ ul li {
   opacity: 0.6;
   cursor: not-allowed;
 }
+.product-gallery .swiper-slide-fully-visible{
+  border: 2px solid transparent;
+    border-radius: 50%;
+    padding: 2px;
+}
+.product-gallery .swiper-slide-thumb-active{
+  border-color: #a87d52;
+    border-radius: 50%;
+}
+.product-gallery .swiper-button-prev, .swiper-button-next{
+  color: #593024;
+}
 @media (max-width: 991px) {
   .blog-lates-card-one {
     padding-bottom: 40px;

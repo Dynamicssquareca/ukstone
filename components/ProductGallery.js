@@ -29,7 +29,7 @@ export default function ProductGallery({
         navigation
         thumbs={{ swiper: thumbsSwiper }}
         spaceBetween={10}
-        className="main-swiper"
+        className="main-swiper main-swiper-gal"
       >
         {images.map((img, index) => (
           <SwiperSlide key={index}>
