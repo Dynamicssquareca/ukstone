@@ -1765,7 +1765,7 @@ ul li {
     border-radius: 50%;
 }
 .product-gallery .swiper-button-prev, .swiper-button-next{
-  color: #593024;
+  color: #593024 !important;
 }
 @media (max-width: 991px) {
   .blog-lates-card-one {
