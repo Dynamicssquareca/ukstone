@@ -315,7 +315,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
                 <div className='card-04-item text-center'>
                   <a href="/memorials/angel-headstone/">
                     <img src='/img/webpages/pic-11.jpg' alt='About Us' className='img-fluid' />
-                    <h4>Angle Headstones</h4>
+                    <h4>Angel Headstones</h4>
                   </a>
                 </div>
               </div>

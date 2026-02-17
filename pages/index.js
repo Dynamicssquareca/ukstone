@@ -115,21 +115,21 @@ export default function Home() {
               <div className='card-01'>
                 <Image src='/img/icons/add-location-alt.png' alt='Our Location' className='img-fluid' width={48} height={49} />
                 <h3>UK Presence</h3>
-                <p>We are based in Liverpool and Southampton, where we maintain a large inventory of catalog items for immediate delivery. As the largest stockist of headstones in the UK.</p>
+                <p>We are a wholesale memorial headstones supplier expanding across the UK, with warehouses in Liverpool and Southampton. This allows us to keep stock ready for fast delivery to trade customers nationwide.</p>
               </div>
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='card-01'>
                 <Image src='/img/icons/delivery-truck-speed.png' alt='Seamless Delivery' className='img-fluid' width={48} height={49} />
                 <h3>Quick Turnaround</h3>
-                <p>We keep standard catalogue items in stock for quick delivery. If you need special bespoke designs or made-to-order items, we have one of the fastest delivery times in the industry, taking just 7 to 8 weeks from our factory in India.</p>
+                <p>Standard catalogue memorials are stocked in our UK warehouses for quick dispatch. For bespoke orders, production is managed by our parent company, Stone Discover, ensuring reliable lead times and consistent quality.</p>
               </div>
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='card-01'>
                 <Image src='/img/icons/handyman.png' alt='Timeless Craftsmanship' className='img-fluid' width={48} height={49} />
                 <h3>Timeless Craftsmanship</h3>
-                <p>Our factory in India is powered by skilled craftsmen who expertly create memorials in any bespoke design you need. Every piece is made using the finest granite and detail-focused workmanship.</p>
+                <p>All memorial headstones are crafted in India by skilled craftsmen using premium granite, delivering durable and high-quality products for the UK trade market.</p>
               </div>
             </div>
           </div>
@@ -169,8 +169,8 @@ export default function Home() {
                 </div>
                 <div className='card-02-item'>
                   <a href="/memorials/angel-headstone/">
-                    <Image src='/img/webpages/pic-04.png' alt='Balck Granite Angels Headstone' className='img-fluid' width={256} height={471} />
-                    <h3>Angels Headstone</h3>
+                    <Image src='/img/webpages/pic-04.png' alt='Balck Granite Angel Headstone' className='img-fluid' width={256} height={471} />
+                    <h3>Angel Headstone</h3>
                   </a>
                 </div>
                 <div className='card-02-item'>
@@ -274,7 +274,7 @@ export default function Home() {
                 <div className='card-04-item text-center'>
                   <a href="/memorials/angel-headstone/">
                     <img src='/img/webpages/pic-11.jpg' alt='About Us' className='img-fluid' />
-                    <h4>Angle Headstones</h4>
+                    <h4>Angel Headstones</h4>
                   </a>
                 </div>
               </div>
