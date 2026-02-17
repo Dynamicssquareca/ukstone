@@ -79,27 +79,13 @@
     "baseSize": "24X12X3",
     "options": [
       {
-        "label": "Set of 4 @125/set",
-        "price": 500
-      },
-      {
         "label": "Set of 7 @125/set",
         "price": 875
-      },
-      {
-        "label": "Set of 11 @120/set",
-        "price": 1320,
-        "discount": "Get 4% discount"
       },
       {
         "label": "Set of 14 @120/set",
         "price": 1680,
         "discount": "Get 4% discount"
-      },
-      {
-        "label": "Set of 18 @115/set",
-        "price": 2070,
-        "discount": "Get 8% discount"
       }
     ],
     "yard": "Liverpool"
