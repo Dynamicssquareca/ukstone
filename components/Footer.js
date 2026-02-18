@@ -121,4 +121,5 @@ const Footer = ({ faq }) => {
     );
 }
 
+
 export default Footer;
