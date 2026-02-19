@@ -572,6 +572,7 @@ ul li {
 .card-04 .card-04-item img {
   margin-bottom: 15px;
   width: 100%;
+  border-radius: 10px;
 }
 .card-04 .card-04-item a:hover {
   color: var(--primary);
@@ -2130,3 +2131,4 @@ ul li {
     font-size: 14px;
   }
 }
+  

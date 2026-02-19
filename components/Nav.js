@@ -118,6 +118,7 @@ const Nav = () => {
           {/* <li><a className="nav-link scrollto" href="/">Industries</a></li> */}
           {/* <li><a className="nav-link scrollto" href="/">Company</a></li> */}
           <li><a style={{ color: '#a44400', fontWeight: 'bold' }} className="nav-link" href="/stocks-available/">In Stock</a></li>
+          <li><a className="nav-link" href="/variety-of-granites/">Variety of granite</a></li>
           <li className="dropdown"><a href="/memorials/"><span>Memorial Stones</span> <i className="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="/memorials/angel-headstone/">Angel Headstone</a></li>
