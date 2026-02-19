@@ -24,7 +24,7 @@ const VarietyGr = () => {
         <meta property="og:image:type" content="image/jpeg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@Stone Discover" />
-        <meta name="twitter:title" content=" 40+ Granite Varieties for Crafting Headstones | Stone Discover" />
+        <meta name="twitter:title" content=" 30+ Granite Varieties for Memorial Headstones UK | Stone Discover" />
         <meta name="twitter:description" content=" Explore 30+ granite varieties for memorial headstones in the UK. Premium quality, bespoke designs, and wholesale options for dealers. Enquire today." />
         <meta name="twitter:image" content="https://www.stonediscover.co.uk/img/stone-home-o.jpeg" />
 
