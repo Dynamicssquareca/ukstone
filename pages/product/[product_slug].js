@@ -151,7 +151,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
                     <p>No specifications available.</p>
                   )}
                 </div>
-                <div className="m-t-40 m-b-30"> <ModelBox className='btn-three' headerText="Scale Your Store! " buttonText="Request a Quote " />
+                <div className="m-t-40 m-b-30"> <ModelBox className='btn-three' headerText="Scale Your Store! " buttonText="Make Enquiry" />
                 </div>
 
                 <div className='product-dis'>
@@ -161,7 +161,7 @@ const ProductPage = ({ product, relatedProducts, specifications, error }) => {
                         <AccordionItem>
                           <AccordionHeader targetId="01">
                             <div className="d-flex justify-content-between align-items-center w-100">
-                              <h3>Description</h3>
+                              <h3>Product Details</h3>
                             </div>
                           </AccordionHeader>
                           <AccordionBody accordionId="01">

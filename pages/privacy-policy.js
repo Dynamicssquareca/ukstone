@@ -5,7 +5,8 @@ const PrivacyPolicy = () => {
     return (
         <>
             <Head>
-                <title></title>
+                <title>Privacy Policy</title>
+                <link rel="canonical" href="https://www.stonediscover.co.uk/privacy-policy/" />
             </Head>
             <div className='common-header-banner'>
                 <div className='container'>
