@@ -364,6 +364,61 @@ export default function Home() {
         </div>
       </section> */}
 
+      <section className='p-b-60 p-t-80 m-p-04'>
+        <div className='container'>
+          <div className='row justify-content-center'>
+            <div className='col-lg-9'>
+              <div className='heading-center p-b-40'>
+                <h2 className='m-b-30'>Our Top Selling <span>Granite</span> Headstones </h2>
+              </div>
+            </div>
+          </div>
+          <div className='row g-2 sliding-row'>
+            <div className='col-lg-3 col-md-6 sliding-col'>
+              <div className='card-04'>
+                <div className='card-04-item text-center'>
+                  <a href="/stocks-available/">
+                    <img src='/img/webpages/black-anton-headstone.png' alt='Black Anton Headstone' className='img-fluid' />
+                    <h4>Black Anton Headstone</h4>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className='col-lg-3 col-md-6 sliding-col'>
+              <div className='card-04'>
+                <div className='card-04-item text-center'>
+                  <a href="/stocks-available/">
+                    <img src='/img/webpages/black-celtic-cross-headstone.png' alt='Black Celtic Cross Headstone' className='img-fluid' />
+                    <h4>Black Celtic Cross Headstone</h4>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className='col-lg-3 col-md-6 sliding-col'>
+              <div className='card-04'>
+                <div className='card-04-item text-center'>
+                  <a href="/stocks-available/">
+                    <img src='/img/webpages/black-ogee-headstone.png' alt='Black Ogee Headstone' className='img-fluid' />
+                    <h4>Black Ogee Headstone</h4>
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <div className='col-lg-3 col-md-6 sliding-col'>
+              <div className='card-04'>
+                <div className='card-04-item text-center'>
+                  <a href="/stocks-available/">
+                    <img src='/img/webpages/Black-Ogee-with-rope-moulding-headstone.png' alt='Black Ogee With Rope Moulding Headstone' className='img-fluid' />
+                    <h4>Black Ogee With Rope Moulding Headstone</h4>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
 
     </>
