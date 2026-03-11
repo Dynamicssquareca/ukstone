@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState,useRef} from 'react';
 import Head from 'next/head';
 import { Accordion, AccordionBody, AccordionHeader, AccordionItem, } from 'reactstrap';
 import Image from 'next/image';
@@ -30,9 +30,35 @@ const CategoryPage = ({ category, products, faq, error }) => {
     }
   };
   /*meta code*/
+  
+  // Read More -> scroll & open behaviour
+  const descRef = useRef(null);
+  const handleReadMore = (e) => {
+    e && e.preventDefault();
+    setOpen('desc');
+    if (descRef.current) {
+      setTimeout(() => {
+        descRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // adjust for fixed header if needed:
+        // window.scrollBy(0, -80);
+      }, 50);
+    }
+  };
 
   const router = useRouter();
   const { AllCategory_slug } = router.query;
+
+  // Prefer subcategory content if subcategory exists, otherwise fall back to category
+ const primary = category || {};
+
+const displayDescription = primary.description?.trim() || '';
+
+const displayExtaDesc = primary.extdesc || '';
+
+const displayShortDesc = primary.shortdescription || '';
+
+const displayHeroImage = primary.image || primary.featuredimage || '';
+
 
   if (error) {
     return <p className="text-danger">{error}</p>;
@@ -137,7 +163,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
       </div>
      </section>
 
-      <section className='about-us-section p-t-80 p-b-40 p-t-40'>
+      {/* <section className='about-us-section p-t-80 p-b-40 p-t-40'>
         <div className='container'>
           <div className='row'>
 
@@ -152,6 +178,68 @@ const CategoryPage = ({ category, products, faq, error }) => {
             <div className='col-lg-6'>
               <div className='about-us-image'>
                 <img src='/img/webpages/about-us-pic.png' alt='About Us' className='img-fluid' />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+      <section className="about-us-section p-t-80 p-b-40 p-t-40">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="about-us-content">
+                <h2>About {primary.title || category?.title}</h2>
+
+                {displayExtaDesc ? (
+                  <div dangerouslySetInnerHTML={{ __html: displayExtaDesc }} />
+                ) : null}
+
+                <button onClick={handleReadMore} className="btn btn-four m-t-30">
+                  Read More
+                </button>
+              </div>
+            </div>
+
+            <div className="col-lg-6">
+              <div className="about-us-image">
+                <img src="/img/webpages/about-us-pic.png" alt="About Us" className="img-fluid" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Full Description target */}
+      <section className="p-t-20 p-b-40" ref={descRef}>
+        <div className="container">
+          {/* <div className="row">
+            <div className="col-lg-12">
+              <div className="heading-left p-b-20">
+                <h2 className="m-b-30">Full Description</h2>
+              </div>
+            </div>
+          </div> */}
+
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="accordion-one accordion-one-product accordion-one-product-new">
+                <Accordion open={open} toggle={toggle}>
+                  <AccordionItem>
+                    
+                    <AccordionBody accordionId="desc">
+                      {displayDescription ? (
+                        <div dangerouslySetInnerHTML={{ __html: displayDescription }} />
+                      ) : (
+                        <p>No additional details available.</p>
+                      )}
+                    </AccordionBody>
+                    {/* <AccordionHeader targetId="desc">
+                      <div className="d-flex justify-content-between align-items-center w-100">
+                        <h3>About {primary.title || category?.title} — Details</h3>
+                      </div>
+                    </AccordionHeader> */}
+                  </AccordionItem>
+                </Accordion>
               </div>
             </div>
           </div>
