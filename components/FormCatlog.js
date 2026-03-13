@@ -299,6 +299,7 @@ const FormCatlog = ({ onSubmit }) => {
               }
             }
           }}
+          enableLongNumbers={true}
           countryCodeEditable={false}
         />
 

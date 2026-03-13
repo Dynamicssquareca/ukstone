@@ -217,6 +217,7 @@ const BookingForm = ({ onSubmit, productData = null }) => {
                         if (errors.phone) setErrors({ ...errors, phone: "" });
                     }}
                     inputClass="form-control"
+                    enableLongNumbers={true}
                 />
                 {errors.phone && <div className="text-danger">{errors.phone}</div>}
             </div>

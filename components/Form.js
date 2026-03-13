@@ -298,6 +298,7 @@ const Form = ({ onSubmit }) => {
               }
             }
           }}
+          enableLongNumbers={true}
           countryCodeEditable={false}
         />
 

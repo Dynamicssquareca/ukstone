@@ -310,6 +310,7 @@ const FormCta = ({ onSubmit }) => {
               }
             }
           }}
+          enableLongNumbers={true}
           countryCodeEditable={false}
         />
         {/* <label htmlFor="name">Phone Number</label> */}
