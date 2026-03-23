@@ -1,4 +1,3 @@
-
 import React, { useState,useRef} from 'react';
 import Head from 'next/head';
 import { Accordion, AccordionBody, AccordionHeader, AccordionItem, } from 'reactstrap';
@@ -20,22 +19,33 @@ const CategoryPage = ({ category, products, faq, error }) => {
     return <p className="text-warning">Category not found.</p>;
   }
 
-  /*accordian code*/
-  const [open, setOpen] = useState('1');
-  const toggle = (id) => {
-    if (open === id) {
-      setOpen();
+  /*accordian code for description*/
+  const [openDesc, setOpenDesc] = useState('');
+  const toggleDesc = (id) => {
+    if (openDesc === id) {
+      setOpenDesc('');
     } else {
-      setOpen(id);
+      setOpenDesc(id);
     }
   };
+
+  /*accordian code for partner section*/
+  const [openPartner, setOpenPartner] = useState('1');
+  const togglePartner = (id) => {
+    if (openPartner === id) {
+      setOpenPartner('');
+    } else {
+      setOpenPartner(id);
+    }
+  };
+
   /*meta code*/
   
   // Read More -> scroll & open behaviour
   const descRef = useRef(null);
   const handleReadMore = (e) => {
     e && e.preventDefault();
-    setOpen('desc');
+    setOpenDesc('desc');
     if (descRef.current) {
       setTimeout(() => {
         descRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -119,10 +129,6 @@ const displayHeroImage = primary.image || primary.featuredimage || '';
         </div>
       </div>
 
-
-
-
-
      <section className='p-t-30'>
        <div className="container py-4 m-p-08">
 
@@ -131,7 +137,6 @@ const displayHeroImage = primary.image || primary.featuredimage || '';
             <div className='about-us-content'>
               <h2>Our Products</h2>
             </div>
-
 
           </div>
           {Array.isArray(products) && products.length > 0 ? (
@@ -223,7 +228,7 @@ const displayHeroImage = primary.image || primary.featuredimage || '';
           <div className="row">
             <div className="col-lg-12">
               <div className="accordion-one accordion-one-product accordion-one-product-new">
-                <Accordion open={open} toggle={toggle}>
+                <Accordion open={openDesc} toggle={toggleDesc}>
                   <AccordionItem>
                     
                     <AccordionBody accordionId="desc">
@@ -264,7 +269,7 @@ const displayHeroImage = primary.image || primary.featuredimage || '';
             <div className='col-lg-6 align-self-center'>
               <div className='form-left'>
                 <div className='accordion-one accordion-one-product'>
-                  <Accordion open={open} toggle={toggle}>
+                  <Accordion open={openPartner} toggle={togglePartner}>
                     <AccordionItem>
                       <AccordionHeader targetId="1">
                         <div className="d-flex justify-content-between align-items-center w-100">
@@ -353,7 +358,7 @@ const displayHeroImage = primary.image || primary.featuredimage || '';
             <div className='col-lg-9'>
               <div className='heading-center p-b-40'>
                 <h2 className='m-b-30'>Memorial Collection <span>Crafted</span> for All</h2>
-                <p>We offer a wide range of expertly crafted memorial designs to suit every need and occasion. From classic headstones and kerbsets to elegant bench and heart memorials, our collection also includes vases, urns, angel tributes, and dedicated children’s memorials. Each piece is made with care, precision, and a deep respect for the memories it honors. Contact us directly for competitive quotes and tailored solutions.</p>
+                <p>We offer a wide range of expertly crafted memorial designs to suit every need and occasion. From classic headstones and kerbsets to elegant bench and heart memorials, our collection also includes vases, urns, angel tributes, and dedicated children's memorials. Each piece is made with care, precision, and a deep respect for the memories it honors. Contact us directly for competitive quotes and tailored solutions.</p>
               </div>
             </div>
           </div>
@@ -428,7 +433,7 @@ const displayHeroImage = primary.image || primary.featuredimage || '';
             <div className='col-lg-9'>
               <div className='heading-center p-b-40'>
                 <h2 className='m-b-30'>Join Hands with a Reliable <span>Tombstone Supplier</span></h2>
-                <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
+                <p>Whether you're a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
               </div>
               <div className='button-center-new text-center'>
                 <ModelBox className='btn-three' headerText="Scale Your Store! " buttonText="Request a Quote" />
@@ -447,7 +452,7 @@ const displayHeroImage = primary.image || primary.featuredimage || '';
             <div className='col-lg-9'>
               <div className='heading-center p-b-40'>
                 <h2 className='m-b-30'>Why Choose Us?</h2>
-                <p>Whether you’re a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
+                <p>Whether you're a high-volume buyer or expanding your product line, our team is here to support your growth. We understand the B2B dynamics of the memorial industry and deliver not just products—but trust, consistency, and partnership.</p>
               </div>
 
             </div>
