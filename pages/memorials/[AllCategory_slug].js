@@ -1,4 +1,4 @@
-import React, { useState,useRef} from 'react';
+import React, { useState, useRef } from 'react';
 import Head from 'next/head';
 import { Accordion, AccordionBody, AccordionHeader, AccordionItem, } from 'reactstrap';
 import Image from 'next/image';
@@ -40,7 +40,7 @@ const CategoryPage = ({ category, products, faq, error }) => {
   };
 
   /*meta code*/
-  
+
   // Read More -> scroll & open behaviour
   const descRef = useRef(null);
   const handleReadMore = (e) => {
@@ -59,15 +59,15 @@ const CategoryPage = ({ category, products, faq, error }) => {
   const { AllCategory_slug } = router.query;
 
   // Prefer subcategory content if subcategory exists, otherwise fall back to category
- const primary = category || {};
+  const primary = category || {};
 
-const displayDescription = primary.description?.trim() || '';
+  const displayDescription = primary.description?.trim() || '';
 
-const displayExtaDesc = primary.extdesc || '';
+  const displayExtaDesc = primary.extdesc || '';
 
-const displayShortDesc = primary.shortdescription || '';
+  const displayShortDesc = primary.shortdescription || '';
 
-const displayHeroImage = primary.image || primary.featuredimage || '';
+  const displayHeroImage = primary.image || primary.featuredimage || '';
 
 
   if (error) {
@@ -94,7 +94,7 @@ const displayHeroImage = primary.image || primary.featuredimage || '';
         {category.metaKeywords && <meta name="keywords" content={category.metaKeywords} />}
         <meta property="og:title" content={category.metaTitle || category.title} />
         <meta property="og:description" content={category.metaDescription || category.excerpt || ''} />
-         <meta property="og:site_name" content="Stone Discover UK" />
+        <meta property="og:site_name" content="Stone Discover UK" />
         <meta
           property="og:image"
           content={
@@ -129,44 +129,44 @@ const displayHeroImage = primary.image || primary.featuredimage || '';
         </div>
       </div>
 
-     <section className='p-t-30'>
-       <div className="container py-4 m-p-08">
+      <section className='p-t-30'>
+        <div className="container py-4 m-p-08">
 
-        <div className="row mt-4">
-          <div className='col-lg-12'>
-            <div className='about-us-content'>
-              <h2>Our Products</h2>
+          <div className="row mt-4">
+            <div className='col-lg-12'>
+              <div className='about-us-content'>
+                <h2>Our Products</h2>
+              </div>
+
             </div>
-
-          </div>
-          {Array.isArray(products) && products.length > 0 ? (
-            products.map((product) => (
-              <div className="col-lg-3 sliding-col-05" key={product._id}>
-                <div className="card-06">
-                  <div className="card-06-item">
-                    <a href={`/product/${product.slug}`}>
-                      <Image
-                        width={300}
-                        height={200}
-                        src={getImageUrl(product.images?.[0])}
-                        alt={product.title}
-                        className="img-fluid"
-                      />
-                      <span>{product.title}</span>
-                    </a>
+            {Array.isArray(products) && products.length > 0 ? (
+              products.map((product) => (
+                <div className="col-lg-3 sliding-col-05" key={product._id}>
+                  <div className="card-06">
+                    <div className="card-06-item">
+                      <a href={`/product/${product.slug}`}>
+                        <Image
+                          width={300}
+                          height={200}
+                          src={getImageUrl(product.images?.[0])}
+                          alt={product.title}
+                          className="img-fluid"
+                        />
+                        <span>{product.title}</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
+              ))
+            ) : (
+              <div className="col-12">
+                <p className="text-muted">No products found in this category.</p>
               </div>
-            ))
-          ) : (
-            <div className="col-12">
-              <p className="text-muted">No products found in this category.</p>
-            </div>
-          )}
+            )}
 
+          </div>
         </div>
-      </div>
-     </section>
+      </section>
 
       {/* <section className='about-us-section p-t-80 p-b-40 p-t-40'>
         <div className='container'>
@@ -230,7 +230,7 @@ const displayHeroImage = primary.image || primary.featuredimage || '';
               <div className="accordion-one accordion-one-product accordion-one-product-new">
                 <Accordion open={openDesc} toggle={toggleDesc}>
                   <AccordionItem>
-                    
+
                     <AccordionBody accordionId="desc">
                       {displayDescription ? (
                         <div dangerouslySetInnerHTML={{ __html: displayDescription }} />
@@ -280,11 +280,13 @@ const displayHeroImage = primary.image || primary.featuredimage || '';
                         </div>
                       </AccordionHeader>
                       <AccordionBody accordionId="1">
-                        <p>We manage our own production facilities in India, allowing us to offer:</p>
+                        <p>We own and operate our production facilities in India — no middlemen, no markups, just direct supply to your business.</p>
+                        <p><b>What this means for you:</b></p>
                         <ul>
-                          <li>Competitive B2B pricing</li>
-                          <li>Flexible customization options</li>
-                          <li>Faster Deliveries with smooth logistics</li>
+                          <li>Competitive B2B wholesale pricing on every order</li>
+                          <li>Flexible customisation on shapes, sizes, and finishes</li>
+                          <li>Faster production turnaround and smooth logistics</li>
+                          <li>Full control over quality from quarry to dispatch</li>
                         </ul>
                       </AccordionBody>
                     </AccordionItem>
@@ -298,8 +300,18 @@ const displayHeroImage = primary.image || primary.featuredimage || '';
                         </div>
                       </AccordionHeader>
                       <AccordionBody accordionId="2">
-                        <p>Our tombstones are crafted from premium-grade Indian granite, renowned for its durability and timeless appeal. Every piece is quality-checked to ensure consistent finishing, accurate dimensions, and enduring aesthetics.</p>
+                        <p>Every piece that leaves our facility is built to last — and built to impress.
+                          Our memorials are crafted from premium-grade Indian granite, renowned worldwide for its density, weather resistance, and timeless finish. Each product goes through a multi-stage quality check covering:
+                        </p>
+                        <ul>
+                          <li>Surface finishing and polish consistency</li>
+                          <li>Dimensional accuracy to your specifications</li>
+                          <li>Structural integrity for outdoor durability</li>
+                          <li>Engraving-ready panel preparation</li>
 
+                        </ul>
+                        <p>When your customers receive a Stone Discover product, it reflects the standard your business stands for.
+                        </p>
                       </AccordionBody>
                     </AccordionItem>
                     <AccordionItem>
@@ -312,15 +324,19 @@ const displayHeroImage = primary.image || primary.featuredimage || '';
                         </div>
                       </AccordionHeader>
                       <AccordionBody accordionId="3">
-                        <p>We support customizations including:</p>
+                        <p>Your customers have unique needs. We make sure you can meet every one of them.</p>
+                        <p><b>We support full customisation across our entire product range, including:
+                        </b></p>
                         <ul>
-                          <li>Headstones</li>
+                          <li>Headstones (upright, flat, kerb sets)</li>
                           <li>Kerbsets</li>
                           <li>Vases and Urns</li>
                           <li>Angel Memorials</li>
                           <li>Children Memorials</li>
-                          <li>All with engraving-ready finishes</li>
+                          <li>Heart Headstones</li>
+                          <li>Memorial Benches</li>
                         </ul>
+                        <p>All designs come engraving-ready, and we welcome custom shapes, sizes, granite colours, and sculpted details. Whether you need a one-off bespoke piece or a bulk order in a specific style — we deliver.</p>
                       </AccordionBody>
                     </AccordionItem>
                     <AccordionItem>
@@ -333,16 +349,21 @@ const displayHeroImage = primary.image || primary.featuredimage || '';
                         </div>
                       </AccordionHeader>
                       <AccordionBody accordionId="4">
-                        <p>With our warehouses located in Liverpool and Southampton, we guarantee:</p>
+                        <p>From our production floor to your door — reliable, trackable, and hassle-free.
+                          Stone Discover UK supplies granite memorials across the entire UK with warehouse distribution from:</p>
+                        <p><b>Southampton · Liverpool · Birmingham · Blackpool · Manchester · Wales · London · Edinburgh · Glasgow · Aberdeen · Scotland
+                        </b></p>
+                        <p>We guarantee:
+                        </p>
                         <ul>
-                          <li>On-time delivery</li>
-                          <li>Proper transport coordination</li>
-                          <li>Hassle-free customs handling</li>
+                          <li>On-time delivery to your location</li>
+                          <li>Proper transport coordination for fragile stone products</li>
+                          <li>Hassle-free customs handling (for international orders)</li>
+                          <li>Bulk order dispatch with flexible lead times</li>
                         </ul>
+                        <p>Whether you're a memorial mason, retail monument supplier, or wholesale distributor — our logistics network is built to keep your business moving.</p>
                       </AccordionBody>
                     </AccordionItem>
-
-
                   </Accordion>
                 </div>
               </div>
