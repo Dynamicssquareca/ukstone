@@ -80,6 +80,7 @@ const Footer = ({ faq }) => {
                                     <li><i className="bi bi-chevron-right"></i> <a href="/contact-us/">Contact Us</a></li>
                                     <li><i className="bi bi-chevron-right"></i> <a href="/terms-of-use/">Terms of service</a></li>
                                     <li><i className="bi bi-chevron-right"></i> <a href="/privacy-policy/">Privacy policy</a></li>
+                                    <li><i className="bi bi-chevron-right"></i> <a href="/photo-gallery/">Photo Gallery</a></li>
                                 </ul>
                             </div>
                             <div className="col-lg-2 col-6 footer-links">
