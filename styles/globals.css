@@ -1777,6 +1777,13 @@ ul li {
     -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
 }
+.cus-pp{
+  font-weight: 600;
+    color: #444444;
+    display: block;
+    margin-top: 21px !important;
+    font-size: 15px
+}
 @media (max-width: 991px) {
   .blog-lates-card-one {
     padding-bottom: 40px;
