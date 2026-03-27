@@ -35,7 +35,7 @@ const VarietyGr = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-9'>
               <div className='heading-center p-b-40'>
-                 <h2 className='m-b-30'>Varieties of Granite <span>Memorial Headstones UK</span></h2>
+                 <h1 style={{fontWeight:'bold'}} className='m-b-30'>Varieties of Granite <span>Memorial Headstones UK</span></h1>
               </div>
             </div>
           </div>
