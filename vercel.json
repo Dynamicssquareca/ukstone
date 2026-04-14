@@ -391,6 +391,11 @@
     "source": "/memorials/bespoke/paradiso-granite-personalized-bespoke-memorial/",
     "destination": "/product/paradiso-granite-personalized-bespoke-memorial/",
     "statusCode": 301
+  },
+  {
+    "source": "/product/black-granite-memorial-kerb-sets/",
+    "destination": "/memorials/kerb-sets/",
+    "statusCode": 301
   }
     ]
   }
